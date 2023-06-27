@@ -1,0 +1,54 @@
+
+@import 'reset';
+@import '../../../fonts/fonts.scss';
+@import '../../burger/burger';
+// @import '../../button/mybutton';
+
+html{
+    // font-weight: 700;
+    background-color: #f6acac;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 1190px;
+}
+
+.header{
+    &__inner{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+        // line-height: 17px;
+    }
+    font-family: 'Montserrat', sans-serif;
+    
+   
+}
+
+.nav{
+        display: flex;
+        &__item{
+            padding-left: 20px;
+        }
+        &__item_bold{
+            font-weight: bold;
+            color: rgba(31, 32, 65, 0.75);
+        }
+        font-size: 14px;
+        font-weight: 400;
+        color: rgba(31, 32, 65, 0.5);
+}
+
+.header__buttons{
+    display: flex;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.expand{
+    background-color: #61b863;
+    width: 500px;
+}

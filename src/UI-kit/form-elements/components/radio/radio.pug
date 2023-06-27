@@ -1,0 +1,18 @@
+mixin radio(options={})
+    -
+        const {
+            description = [],
+            checked = true,
+            value = [],
+            name = 'gender',
+            quantity = 2,
+            container_class = '',
+        } = options;
+
+    div(class=container_class)
+        - for (let x = 0; x < quantity; x++)
+            div.radio
+                label.radio__label
+                    input.radio__input(type='radio', name = name, value = options.value[x], checked = checked)
+                    .radio__button
+                    .radio__description=options.description[x] 

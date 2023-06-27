@@ -1,0 +1,15 @@
+mixin like-button(options={})
+    -
+        const {
+            description = '',
+            isLiked = false,
+            counter = '',
+        } = options;
+
+        const classLiked = isLiked
+            ? 'like-button_liked'
+            : '';
+    
+    .like-button(data-like=counter class=classLiked)
+        .like-button__icon 
+        .like-button__numb=counter

@@ -1,0 +1,27 @@
+
+
+.masked-textfield{
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+}
+
+.masked-textfield__header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.masked-textfield__input{
+    border: rgba(31, 32, 65, 0.25) 1px solid;
+    width: 100%;
+    height: 44px;
+    border-radius: 4px;
+    padding: 0px 5px;
+}
+
+.masked-textfield__input:hover, :focus{
+    border: rgba(31, 32, 65, 0.5) 1px solid;
+}

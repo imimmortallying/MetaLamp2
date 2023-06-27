@@ -1,0 +1,137 @@
+
+.dropdown__container{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 4px;
+    width: 320px;
+    background-color: white;
+    z-index: 2;
+
+}
+
+.dropdown__items-container{
+    // display: block;
+    position: relative;
+    display: none;
+    border-top: 1px solid rgba(31, 32, 65, 0.25);
+    padding-left: 15px;
+}
+
+.dropdown__items_active{
+    z-index: 2;
+    display: block;
+    background-color: rgb(255, 255, 255);
+}
+
+.dropdown__header_active::after{
+
+    transform: rotate(-180deg);
+}
+
+.dropdown__item{
+    display: flex;
+    justify-content: space-between;
+    height: 44px;
+    width: 100%;
+    line-height: 44px;
+}
+
+.dropdown__header{
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    padding-right: 60px;
+    text-align: left;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 15px;
+}
+
+.dropdown__header::after{
+    position: absolute;
+    content: '';
+    background-image: url(/src/icons/expand_more.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 44px;
+    width: 44px;
+    top: 0%;
+    left: 320px-44px;
+    transition: transform 0.15s linear;
+}
+
+.dropdown__buttons-block{
+    display: flex;
+    justify-content: space-between;
+    width: 99px;
+    // position: relative;
+    // line-height: 44px;
+    // vertical-align: top;
+    // text-align: center;
+    margin-right: 7px;
+}
+
+.dropdown__btn-minus{
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+
+.dropdown__btn-minus::before{
+    position: absolute;
+    content: '';
+    height: 30px;
+    width: 30px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 22px;
+    top: 7px;
+    right: 0px;
+}
+
+.dropdown__btn-plus{
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+
+.dropdown__btn-plus::before{
+    position: absolute;
+    content: '';
+    height: 30px;
+    width: 30px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 22px;
+    top: 7px;
+    right: 0px;
+}
+
+.dropdown__count{
+
+}
+
+.dropdown__footer{
+    height: 40px;
+    position: relative;
+    // display: grid;
+    // grid-template-columns: 229px 91px;
+}
+
+.dropdown__apply-btn{
+    position: absolute;
+    right: 7px;
+    bottom: 13px;
+    // display: none;
+}
+
+.dropdown__clean-btn{
+    position: absolute;
+    bottom: 13px;
+    display: none;
+}
+
+.dropdown__clean-btn_active{
+    display: block;
+}

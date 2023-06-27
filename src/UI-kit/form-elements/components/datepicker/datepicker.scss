@@ -1,0 +1,326 @@
+.datepicker {
+    $root: &;
+  
+    outline: 0;
+    width: 320px;
+    position: relative;
+    z-index: 1;
+  
+    &__input {
+      display: none;
+    }
+  
+    &__wrapper {
+ 
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+  
+      & & {
+        flex-direction: column;
+        width: auto;
+      }
+    }
+  
+    &__header {
+      font-size: 12px;
+      line-height: 15px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-top: 0;
+      margin-bottom: 5px;
+      cursor: default;
+  
+      &_format_filter {
+        display: none;
+      }
+  
+      &::selection {
+        background: transparent;
+      }
+    }
+  
+    &__drop {
+      width: 150px;
+      height: 44px;
+      background: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+      padding-left: 15px;
+      border: 1px solid rgb(31 32 65 / 25%);
+      border-radius: 4px;
+      color: rgb(31 32 65 / 75%);
+      cursor: pointer;
+  
+      &_format_filter {
+        display: none;
+        width: 100%;
+      }
+  
+      &::after {
+        content: 'expand_more';
+        font-family: material-icons, Arial, sans-serif;
+        font-size: 24px;
+        color: rgb(31 32 65 / 50%);
+        width: 44px;
+        text-align: center;
+      }
+  
+      &::selection {
+        background: transparent;
+      }
+    }
+  
+    &__down {
+      background: white;
+      position: absolute;
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 5px;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      border: 1px solid rgb(31 32 65 / 25%);
+      border-radius: 4px;
+      box-shadow: 0 10px 20px 0 rgb(31 32 65 / 5%);
+      z-index: 0;
+    }
+  
+    &_open {
+      #{$root}__drop {
+        &::after {
+          content: 'expand_less';
+        }
+      }
+  
+      #{$root}__down {
+        display: flex;
+        z-index: 2;
+      }
+    }
+  
+    @mixin button-back-forward {
+      font-family: material-icons, Arial, sans-serif;
+      text-transform: none;
+      font-size: 24px;
+      font-weight: normal;
+    }
+  
+    &__button {
+      background-color: transparent;
+      border: 0;
+      outline: 0;
+      padding: 20px;
+      font-family: montserrat, Arial, sans-serif;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: bold;
+      color: #bc9cff;
+      cursor: pointer;
+  
+      &_action_back {
+        @include button-back-forward;
+      }
+  
+      &_action_forward {
+        @include button-back-forward;
+      }
+  
+      &:active {
+        transform: scale(0.85);
+      }
+  
+      &:disabled {
+        color: rgb(31 32 65 / 50%);
+        pointer-events: none;
+        cursor: default;
+      }
+  
+      &::selection {
+        background: transparent;
+      }
+    }
+  
+    &__month-year {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 19px;
+      font-weight: bold;
+      color: #1f2041;
+      cursor: default;
+  
+      &::selection {
+        background: transparent;
+      }
+    }
+  
+    &__calendar {
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+  
+    &__calendar-header {
+      font-weight: bold;
+      color: #bc9cff;
+    }
+  
+    &__row {
+      color: rgb(31 32 65 / 50%);
+    }
+  
+    @mixin circle-cell {
+      color: white;
+      font-weight: bold;
+      border-radius: 22px;
+    }
+  
+    &__cell {
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      font-size: 12px;
+      padding: 0;
+      cursor: default;
+      position: relative;
+  
+      &_clickable {
+        cursor: pointer;
+      }
+  
+      &_date_other-month {
+        color: rgb(31 32 65 / 25%);
+      }
+  
+      &_date_today {
+        font-weight: bold;
+        color: #bc9cff;
+      }
+  
+      &_format_cursor {
+        @include circle-cell;
+  
+        background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+      }
+  
+      &_selected {
+        @include circle-cell;
+  
+        background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+      }
+  
+      &::selection {
+        background: transparent;
+      }
+    }
+  
+    &_format_filter {
+      width: 266px;
+  
+      #{$root}__header {
+        display: none;
+  
+        &_format_filter {
+          display: flex;
+        }
+      }
+  
+      #{$root}__drop {
+        display: none;
+  
+        &_format_filter {
+          display: flex;
+        }
+      }
+  
+      #{$root}__month-year {
+        font-size: 17px;
+      }
+  
+      #{$root}__cell {
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+      }
+    }
+  
+    &__cell-period {
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+      opacity: 0.25;
+  
+      &_date_sunday {
+        border-bottom-right-radius: 22px;
+        border-top-right-radius: 22px;
+      }
+  
+      &_date_monday {
+        border-bottom-left-radius: 22px;
+        border-top-left-radius: 22px;
+      }
+  
+      &_date_arrival {
+        width: 50%;
+        right: 0;
+      }
+  
+      &_date_departure {
+        width: 50%;
+      }
+    }
+  
+    &_format_demo {
+      #{$root}__drop {
+        display: none;
+      }
+  
+      #{$root}__header {
+        display: none;
+      }
+  
+      #{$root}__down {
+        margin-top: 0;
+        display: flex;
+      }
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .datepicker {
+      width: 266px;
+  
+      &__header {
+        display: none;
+  
+        &_format_filter {
+          display: flex;
+        }
+      }
+  
+      &__drop {
+        display: none;
+  
+        &_format_filter {
+          display: flex;
+        }
+      }
+  
+      &__month-year {
+        font-size: 17px;
+      }
+  
+      &__cell {
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+      }
+    }
+  }
+  

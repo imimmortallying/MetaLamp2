@@ -1,0 +1,76 @@
+mixin datepicker(options={})
+  -
+    const {
+      name = 'undefined-name', //- prefix for input field names
+      headerCommon = '', //- header for merged drop (FILTER DATE DROPDOWN)
+      headerArrival = '', //- header for arrival drop
+      headerDeparture = '', //- header for departure drop
+      modifier = '', //- filter/demo (or missing)
+    } = options;
+
+    const datepickerModifier = (() => {
+      if (modifier === 'filter') {
+        return 'datepicker_format_filter';
+      }
+
+      if (modifier === 'demo') {
+        return 'datepicker_format_demo';
+      }
+
+      return '';
+    })();
+
+    const days = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
+
+  .datepicker.js-datepicker(
+    class= datepickerModifier
+    tabindex="0"
+    data-active="arrival"
+  )
+    input.datepicker__input.js-datepicker__input_date_arrival(
+      type="date"
+      name= `${name}-arrival`
+    )
+    input.datepicker__input.js-datepicker__input_date_departure(
+      type="date"
+      name= `${name}-departure`
+    )
+    p.datepicker__header.datepicker__header_format_filter= headerCommon
+    .datepicker__drop.datepicker__drop_format_filter.js-datepicker__drop_format_filter
+      = 'Укажите даты пребывания'
+    .datepicker__wrapper
+      .datepicker__wrapper
+        p.datepicker__header= headerArrival
+        time.datepicker__drop.js-datepicker__drop_date_arrival(datetime="1970-01-01") ДД.ММ.ГГГГ
+      .datepicker__wrapper
+        p.datepicker__header= headerDeparture
+        time.datepicker__drop.js-datepicker__drop_date_departure(datetime="1970-01-01") ДД.ММ.ГГГГ
+    .datepicker__down.js-datepicker__down
+      .datepicker__wrapper
+        button.datepicker__button.datepicker__button_action_back.js-datepicker__button_action_back(
+          type="button"
+          tabindex="-1"
+          disabled
+        ) arrow_back
+        p.datepicker__month-year.js-datepicker__month-year
+        button.datepicker__button.datepicker__button_action_forward.js-datepicker__button_action_forward(
+          type="button"
+          tabindex="-1"
+        ) arrow_forward
+      table.datepicker__calendar
+        thead.datepicker__thead
+          tr.datepicker__calendar-header
+            each day in days
+              th.datepicker__cell(scope="col")= day
+        tbody.datepicker__tbody.js-datepicker__tbody
+      .datepicker__wrapper
+        button.datepicker__button.js-datepicker__button_action_clear(
+          type="button"
+          tabindex="-1"
+          disabled
+        ) очистить
+        button.datepicker__button.js-datepicker__button_action_confirm(
+          type="button"
+          tabindex="-1"
+          disabled
+        ) применить

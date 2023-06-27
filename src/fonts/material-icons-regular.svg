@@ -1,0 +1,61 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg>
+<metadata>
+Created by FontForge 20090914 at Thu Jun 24 10:40:20 2021
+ By www-data
+Copyright 2018 Google, Inc. All Rights Reserved.
+</metadata>
+<defs>
+<font id="MaterialIcons-Regular" horiz-adv-x="512" >
+  <font-face 
+    font-family="Material Icons"
+    font-weight="400"
+    font-stretch="normal"
+    units-per-em="512"
+    panose-1="2 0 5 3 0 0 0 0 0 0"
+    ascent="512"
+    descent="0"
+    bbox="-0.00390625 -0.199844 512.008 512.2"
+    underline-thickness="50"
+    underline-position="-100"
+    unicode-range="U+0030-U+10FFFD"
+  />
+<missing-glyph 
+d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
+    <glyph glyph-name="uniE000" unicode="error" 
+d="M277 235v128h-42v-128h42zM277 149v43h-42v-43h42zM256 469c58.667 0 108.834 -20.833 150.501 -62.5s62.5 -91.834 62.5 -150.501s-20.833 -108.834 -62.5 -150.501s-91.834 -62.5 -150.501 -62.5s-108.834 20.833 -150.501 62.5s-62.5 91.834 -62.5 150.501
+s20.833 108.834 62.5 150.501s91.834 62.5 150.501 62.5z" />
+
+    <glyph glyph-name="uniE5C3" unicode="apps" 
+d="M341 85v86h86v-86h-86zM341 213v86h86v-86h-86zM213 341v86h86v-86h-86zM341 427h86v-86h-86v86zM213 213v86h86v-86h-86zM85 213v86h86v-86h-86zM85 85v86h86v-86h-86zM213 85v86h86v-86h-86zM85 341v86h86v-86h-86z" />
+    <glyph glyph-name="uniE5C4" unicode="arrow_back" 
+d="M427 277v-42h-260l119 -120l-30 -30l-171 171l171 171l30 -30l-119 -120h260z" />
+    <glyph glyph-name="uniE5C5" unicode="arrow_drop_down" 
+d="M149 299h214l-107 -107z" />
+    <glyph glyph-name="uniE5C6" unicode="arrow_drop_down_circle" 
+d="M256 213l85 86h-170zM256 469c58.667 0 108.834 -20.833 150.501 -62.5s62.5 -91.834 62.5 -150.501s-20.833 -108.834 -62.5 -150.501s-91.834 -62.5 -150.501 -62.5s-108.834 20.833 -150.501 62.5s-62.5 91.834 -62.5 150.501s20.833 108.834 62.5 150.501
+s91.834 62.5 150.501 62.5z" />
+    <glyph glyph-name="uniE5C7" unicode="arrow_drop_up" 
+d="M149 213l107 107l107 -107h-214z" />
+    <glyph glyph-name="uniE5C8" unicode="arrow_forward" 
+d="M256 427l171 -171l-171 -171l-30 30l119 120h-260v42h260l-119 120z" />
+    <glyph glyph-name="uniE5C9" unicode="cancel" 
+d="M363 179l-77 77l77 77l-30 30l-77 -77l-77 77l-30 -30l77 -77l-77 -77l30 -30l77 77l77 -77zM256 469c58.667 0 108.834 -20.833 150.501 -62.5s62.5 -91.834 62.5 -150.501s-20.833 -108.834 -62.5 -150.501s-91.834 -62.5 -150.501 -62.5
+s-108.834 20.833 -150.501 62.5s-62.5 91.834 -62.5 150.501s20.833 108.834 62.5 150.501s91.834 62.5 150.501 62.5z" />
+    <glyph glyph-name="uniE5CA" unicode="check" 
+d="M192 167l226 226l30 -30l-256 -256l-119 119l30 30z" />
+    <glyph glyph-name="uniE5CB" unicode="chevron_left" 
+d="M329 354l-98 -98l98 -98l-30 -30l-128 128l128 128z" />
+    <glyph glyph-name="uniE5CC" unicode="chevron_right" 
+d="M213 384l128 -128l-128 -128l-30 30l98 98l-98 98z" />
+    <glyph glyph-name="uniE5CD" unicode="close" 
+d="M405 375l-119 -119l119 -119l-30 -30l-119 119l-119 -119l-30 30l119 119l-119 119l30 30l119 -119l119 119z" />
+    <glyph glyph-name="uniE5CE" unicode="expand_less" 
+d="M256 341l128 -128l-30 -30l-98 98l-98 -98l-30 30z" />
+    <glyph glyph-name="uniE5CF" unicode="expand_more" 
+d="M354 329l30 -30l-128 -128l-128 128l30 30l98 -98z" />
+
+
+  </font>
+</defs></svg>

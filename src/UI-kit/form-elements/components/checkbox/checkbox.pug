@@ -1,0 +1,19 @@
+mixin checkbox(options={})
+    -
+        const {
+            description = [],
+            checked = false,
+            rich = false,
+            title = '',
+        } = options;
+
+    div.checkbox
+        label.checkbox__label
+            input.checkbox__input(type="checkbox", checked = checked)
+            div.checkbox__square
+            if (rich)
+                div.checkbox__container_rich
+                    div.checkbox__title_rich=title
+                    div.checkbox__description_rich=description
+            else
+                div.checkbox__description=options.description

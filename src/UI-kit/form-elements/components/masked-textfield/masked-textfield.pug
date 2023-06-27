@@ -1,0 +1,19 @@
+mixin masked-textfield(options={})
+    -
+        const {
+            header = false,
+            title = '',
+            description = '',
+            placeholder = '',
+            type = '',
+            name = '',
+            value = '',
+        } = options;
+
+    div.masked-textfield
+        if (header)
+            div.masked-textfield__header
+                p.masked-textfield__title=title
+                p.masked-textfield__description=description
+        div.masked-textfield__wrapper
+            input.masked-textfield__input(type=options.type, name=options.name, placeholder=options.placeholder, value=options.value)

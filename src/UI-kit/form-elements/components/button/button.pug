@@ -1,0 +1,47 @@
+//- mixin button(options = {text: "click me", theme:'transparent', width:'regular'})
+//-     .button(class=`button_theme_${options.theme}` class=`button_width_${options.width}`)= options.text
+
+mixin button(options={})
+  -
+    const {
+      width = '', //- ultra-narrow - 61px, narrow - 87px, regular - 99px, wide - 196px, ultra-wide - 320px
+      theme = '', //- This is height. low - 34px, regular - 44px
+      text = '',
+      isArrowed = false,
+      disabled = false,
+    } = options;
+
+    const classArrowed = isArrowed
+      ? 'button-arrowed'
+      : '';
+
+    const classWidth = (() => {
+      switch (width) {
+        case 'narrow':
+          return 'button_width_narrow';
+        case 'regular':
+          return 'button-width-regular';
+        case 'wide':
+          return 'button-width-wide';
+        default:
+          return 'button-width-regular';
+      }
+    })();
+
+    const classTheme = (() => {
+      switch (theme) {
+        case 'hollow':
+          return 'button-theme-hollow';
+        case 'full':
+          return 'button-theme-full';
+        case 'text':
+          return 'button-theme-text';
+        default:
+          return 'button-theme-full';
+      }
+    })();
+
+  button.button(
+    class= [classWidth, classTheme, classArrowed]
+    disabled= disabled
+  )= text

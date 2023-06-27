@@ -1,0 +1,11 @@
+mixin toggle(options={})
+    -
+        const {
+            description = '',
+        } = options;
+
+    div.toggle
+        label.toggle__label
+            input.toggle__input(type='checkbox')
+            span.toggle__slider
+        div.toggle__description=description

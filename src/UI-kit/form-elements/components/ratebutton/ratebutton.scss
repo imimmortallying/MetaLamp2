@@ -1,0 +1,27 @@
+.rate-button__container{
+    display: flex;
+    // background-color: #a39292;
+    // height: 40px;
+}
+
+.rate-button__star{
+    height: 24px;
+    width: 24px;
+    position: relative;
+}
+
+.rate-button__star:after{
+    content: '';
+    background-image: url(/src/icons/star_border.svg);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 24px;
+    width: 24px;
+    top: 0%;
+    left: 0%;
+}
+
+.rate-button__star-full:after{
+    background-image: url(/src/icons/star.svg);
+}

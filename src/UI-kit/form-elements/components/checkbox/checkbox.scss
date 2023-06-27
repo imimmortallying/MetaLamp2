@@ -1,0 +1,56 @@
+
+
+.checkbox__input{
+    appearance: none;
+    display: none;
+    // -moz-appearance: none;
+    // -webkit-appearance: none;
+    // position: absolute; это свойство ничего не меняет. Из-за сброса?
+}
+
+.checkbox__square{
+    height: 20px;
+    width: 20px;
+    flex-shrink: 0;
+    margin-right: 10px;
+    border-radius: 4px;
+    border: 1px rgba(31, 32, 65, 0.25) solid;
+}
+
+.checkbox__input:checked + .checkbox__square {
+    border: 1px rgb(134, 109, 189) solid;
+    background-image: url(/src/icons/checkbox_checked.svg);
+    background-size: 10px auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.checkbox__label{
+        display: flex;
+}
+
+.checkbox__description{
+    line-height: 18px;
+    text-align: left;
+    max-width: 216px;
+}
+
+.checkbox__description_rich{
+    line-height: 14px;
+    text-align: left;
+    max-width: 216px;
+    font-size: 12px;
+}
+
+.checkbox__title_rich{
+    font-weight: bold;
+    text-align: left;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 4px;
+}
+
+.checkbox__container_rich{
+    display: flex;
+    flex-direction: column; 
+}

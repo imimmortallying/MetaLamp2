@@ -1,0 +1,93 @@
+include components/button/button
+include components/checkbox/checkbox
+include components/radio/radio
+include components/toggle/toggle
+include components/pagination/pagination
+include components/like-button/like-button
+include components/slider/slider
+include components/textfield/textfield
+include components/masked-textfield/masked-textfield
+include components/datepicker/datepicker
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+    body
+        div.form-elements__header header
+        div.form-elements
+            div.form-elements__item.first-child
+                +textfield({header: true, title:'text field', description:'default', type:'email', placeholder: 'Email'})
+                +textfield({header: true, title:'text field', description:'hover/focus', type:'text', value: 'This is pretty awesome', placeholder: 'Email'})
+                div.form-elements__dropdown-container='dropdown'
+                +masked-textfield({header: true, title:'masked text field', type:'tel', placeholder: "ДД.ММ.ГГГГ"})
+                .form-elements__dropdown2_1
+                    +datepicker({
+                    name: 'date-regular',
+                    headerArrival: 'date dropdown',
+                    headerDeparture: 'date dropdown',
+                    headerCommon: 'даты пребывания в отеле',
+                    })
+                .form-elements__dropdown2
+                    +datepicker({
+                    name: 'date-filter',
+                    headerCommon: 'filter date dropdown',
+                    modifier: 'filter',
+                    })
+                
+
+            div.form-elements__item.second-child
+                .form-elements__checkbox-block checkbox buttons
+                    .form-elements__checkbox-container
+                        +checkbox({description:'Можно курить'})
+                        +checkbox({description:'Можно с питомцами', checked: true})
+                        +checkbox({description:'Можно пригласить гостей (до 10 человек)', checked: true})
+                .form-elements__radio-block radio buttons
+                    +radio({description: ['мужчина','женщина'], value: ['male','female'], container_class: 'form-elements__radio-container', checked: 'true'})
+                .form-elements__toggle-block toggle
+                    .form-elements__toggle-container
+                        +toggle({description:'получать спецпредложения' })
+                        +toggle({description:'получать спецпредложения' })
+                .form-elements__like-button-block like button
+                    .form-elements__like-button-container
+                        +like-button({counter:2})         
+                        +like-button({counter:12,  isLiked: true})         
+                .form-elements__rate-button-block rate button
+                    .form-elements__rate-button-container
+            div.form-elements__item
+                div.form-elements__slider-block
+                    .form-elements__slider-container
+                        +slider({description:'range slider', max: '15000', min: '5000', step:'1000', value1:'7000', value2: '10000'})
+                div.form-elements__buttons
+                    .form-elements__label buttons
+                    .form-elements__button
+                        +button({theme:"full", text:"click me", width:'regular'})
+                    .form-elements__button
+                        +button({theme:"full", text:"click me", width:'regular', disabled: 'true'})
+                    .form-elements__button
+                        +button({theme:"hollow", text:"click me", width:'regular'})
+                    .form-elements__button
+                        +button({theme:"hollow", text:"click me", width:'regular', disabled: 'true'})
+                    .form-elements__button
+                        +button({theme:"text", text:"click me", width:'narrow'})
+                    .form-elements__button
+                        +button({theme:"text", text:"click me", width:'narrow', disabled: 'true'})
+                    .form-elements__button
+                        +button({theme:"full", text:"перейти к оплате", width:'wide', isArrowed:true})
+                .form-elements__pagination-block  pagination
+                    .form-elements__pagination-container
+                        +pagination({})
+            div.form-elements__item
+            div.form-elements__item
+            div.form-elements__item
+
+                    
+
+  
+    
+    
+                    
+        

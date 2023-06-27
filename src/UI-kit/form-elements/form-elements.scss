@@ -1,0 +1,185 @@
+@import '../../styles/reset.css';
+@import '../../styles/variables.scss';
+@import 'components/button/button.scss';
+@import 'components/checkbox/checkbox.scss';
+@import 'components/radio/radio.scss';
+@import 'components/toggle/toggle.scss';
+@import 'components/pagination/pagination.scss';
+@import 'components/like-button/like-button.scss';
+@import 'components/slider/slider.scss';
+@import 'components/ratebutton/ratebutton.scss';
+@import 'components/textfield/textfield.scss';
+@import 'components/dropdown/dropdown.scss';
+@import 'components/masked-textfield/masked-textfield.scss';
+@import 'components/datepicker/datepicker.scss';
+// @import 'components/date-dropdown/date-dropdown.scss';
+
+.form-elements{
+
+    font-family: montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    // text-transform: uppercase;
+
+    padding: 0 0 0 141px;
+    display: grid;
+    grid-template-columns: 374px 320px 320px;
+    grid-template-rows: repeat(2, fr);
+    column-gap: 72px;
+    row-gap: 10px;
+    &__item{
+        min-height: 300px;
+        max-height: 500px;
+        text-align: center;
+    }
+    &__header{
+        height: 140px;
+        background-color: #ffd4ec;
+    }
+}
+
+//first column
+// разберись с этим классом, как его задать через child
+
+.first-child{
+    display: grid;
+    grid-template-rows: 85px 85px 87px 104px 105px 105px;
+}
+
+// переделать!!!!
+.form-elements__dropdown2_1{
+    z-index: 4;
+}
+// second column
+// разберись с этим классом, как его задать через child
+
+.second-child{
+    // background-color: #ffc4c4;
+    display: grid;
+    grid-template-rows: 170px 92px 130px 91px 84px;
+}
+
+//first block
+.form-elements__checkbox-block{
+    background-color: #fffad1;
+}
+
+.form-elements__checkbox-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+    gap: 10px;
+}
+
+//second block
+.form-elements__radio-block{
+    background-color: #ffd1d1;
+}
+
+.form-elements__radio-container{
+    display: grid;
+    grid-template-columns: 118px 1fr;
+    margin-top: 20px;
+}
+
+//third block
+.form-elements__toggle-block{
+    background-color: #f0ffd1;
+}
+
+.form-elements__toggle-container{
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+
+.form-elements__like-button-block{
+    // background-color: #96c297;
+}
+
+.form-elements__like-button-container{
+    margin-top: 16px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.form-elements__rate-button-block{
+// background-color: #cf5c5c;
+}
+
+.form-elements__rate-button-container{
+    display: flex;
+    gap: 20px;
+}
+
+
+
+// third column
+
+.form-elements__slider-block{
+    height:88px;
+}
+
+
+
+// .slider__header{
+//     display: flex;
+//     justify-content: space-between;
+// }
+
+.form-elements__buttons{
+    display: grid;
+    grid-template-columns: 81px 38px 1fr;
+    grid-template-rows: 31px 74px 75px 45px 84px;
+    grid-template-areas:
+        "a a a"
+        "b b c"
+        "d d e"
+        "f g g"
+        "x x x";
+        justify-items: start;
+    }
+    
+    .form-elements__buttons :first-child {
+        grid-area: a;
+    }
+    
+    .form-elements__buttons :nth-child(2) {
+        grid-area: b;
+    }
+    
+    .form-elements__buttons :nth-child(3) {
+        grid-area: c;
+    }
+    
+    .form-elements__buttons :nth-child(4) {
+        grid-area: d;
+    }
+    
+.form-elements__buttons :nth-child(5) {
+    grid-area: e;
+}
+
+.form-elements__buttons :nth-child(6) {
+    grid-area: f;
+}
+
+.form-elements__buttons :nth-child(7) {
+    grid-area: g;
+}
+
+.form-elements__buttons :nth-child(8) {
+    grid-area: x;
+}
+
+// pagination
+
+.form-elements__pagination-block{
+display: flex;
+flex-direction: column;
+}
+
+
