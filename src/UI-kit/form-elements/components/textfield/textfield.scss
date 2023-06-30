@@ -22,6 +22,10 @@
     padding: 0px 5px;
 }
 
-.textfield__input:hover, :focus{
+.textfield__input:hover{
+    border: rgba(31, 32, 65, 0.5) 1px solid;
+}
+
+.textfield__input:focus{
     border: rgba(31, 32, 65, 0.5) 1px solid;
 }

@@ -8,6 +8,7 @@ include components/slider/slider
 include components/textfield/textfield
 include components/masked-textfield/masked-textfield
 include components/datepicker/datepicker
+include components/subscription/subscription
 
 doctype html
 html(lang="en")
@@ -37,6 +38,7 @@ html(lang="en")
                     headerCommon: 'filter date dropdown',
                     modifier: 'filter',
                     })
+                +subscription({header: true, title:'subscription textfield', type:'email', placeholder: 'Email'})
                 
 
             div.form-elements__item.second-child

@@ -16,12 +16,14 @@
       justify-content: space-between;
       width: 100%;
   
+  
       & & {
         flex-direction: column;
         width: auto;
       }
     }
   
+    
     &__header {
       font-size: 12px;
       line-height: 15px;
@@ -89,6 +91,7 @@
     }
   
     &_open {
+
       #{$root}__drop {
         &::after {
           content: 'expand_less';

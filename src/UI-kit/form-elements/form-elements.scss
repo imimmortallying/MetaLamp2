@@ -12,7 +12,8 @@
 @import 'components/dropdown/dropdown.scss';
 @import 'components/masked-textfield/masked-textfield.scss';
 @import 'components/datepicker/datepicker.scss';
-// @import 'components/date-dropdown/date-dropdown.scss';
+@import 'components/subscription/subscription.scss';
+
 
 .form-elements{
 
@@ -49,6 +50,8 @@
 // переделать!!!!
 .form-elements__dropdown2_1{
     z-index: 4;
+    // border:none;
+
 }
 // second column
 // разберись с этим классом, как его задать через child
