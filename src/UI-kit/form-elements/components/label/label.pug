@@ -1,0 +1,11 @@
+mixin label(options={})
+    -
+        const {
+            newClass = '',
+            labelLeft = '',
+            labelRight = '',
+        } = options;
+
+    div(class=options.newClass)
+        div.label__label-left=options.labelLeft
+        div.label__label-right=options.labelRight

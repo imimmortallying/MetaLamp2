@@ -9,6 +9,7 @@ include components/textfield/textfield
 include components/masked-textfield/masked-textfield
 include components/datepicker/datepicker
 include components/subscription/subscription
+include components/label/label
 
 doctype html
 html(lang="en")
@@ -23,7 +24,7 @@ html(lang="en")
             div.form-elements__item.first-child
                 +textfield({header: true, title:'text field', description:'default', type:'email', placeholder: 'Email'})
                 +textfield({header: true, title:'text field', description:'hover/focus', type:'text', value: 'This is pretty awesome', placeholder: 'Email'})
-                div.form-elements__dropdown-container='dropdown'
+                div.form-elements__dropdown-container-guests='dropdown'
                 +masked-textfield({header: true, title:'masked text field', type:'tel', placeholder: "ДД.ММ.ГГГГ"})
                 .form-elements__dropdown2_1
                     +datepicker({
@@ -39,26 +40,37 @@ html(lang="en")
                     modifier: 'filter',
                     })
                 +subscription({header: true, title:'subscription textfield', type:'email', placeholder: 'Email'})
-                
+                div.form-elements__dropdown-container-rooms
+                //- div.form-elements__dropdown-container-rooms2
 
             div.form-elements__item.second-child
-                .form-elements__checkbox-block checkbox buttons
+                .form-elements__checkbox-block
+                    +label({newClass:'form-elements__label', labelLeft:'checkbox buttons'})
                     .form-elements__checkbox-container
                         +checkbox({description:'Можно курить'})
                         +checkbox({description:'Можно с питомцами', checked: true})
                         +checkbox({description:'Можно пригласить гостей (до 10 человек)', checked: true})
-                .form-elements__radio-block radio buttons
-                    +radio({description: ['мужчина','женщина'], value: ['male','female'], container_class: 'form-elements__radio-container', checked: 'true'})
-                .form-elements__toggle-block toggle
+                .form-elements__radio-block
+                    +label({newClass:'form-elements__label', labelLeft:'radio buttons'})
+                    +radio({description: ['Мужчина','Женщина'], value: ['male','female'], container_class: 'form-elements__radio-container', checked: 'true'})
+                .form-elements__toggle-block
+                    +label({newClass:'form-elements__label', labelLeft:'toggle'})
                     .form-elements__toggle-container
-                        +toggle({description:'получать спецпредложения' })
-                        +toggle({description:'получать спецпредложения' })
-                .form-elements__like-button-block like button
+                        +toggle({description:'Получать спецпредложения' })
+                        +toggle({description:'Получать спецпредложения' })
+                .form-elements__like-button-block 
+                    +label({newClass:'form-elements__label', labelLeft:'like button'})
                     .form-elements__like-button-container
                         +like-button({counter:2})         
                         +like-button({counter:12,  isLiked: true})         
-                .form-elements__rate-button-block rate button
+                .form-elements__rate-button-block 
+                    +label({newClass:'form-elements__label', labelLeft:'rate button'})
                     .form-elements__rate-button-container
+                .form-elements__dropdown-container-guests2 
+                    +label({newClass:'form-elements__label', labelLeft:'like button'})
+                .form-elements__rich-checkbox-buttons
+                    +checkbox({description:'Ширина коридоров в номере не менее 91см', rich: true, title: 'Широкий коридор'})
+                    +checkbox({description:'На первом этаже вас встретит специалист и проводит до номера', rich: true, title: 'Помощник для инвалидов'})
             div.form-elements__item
                 div.form-elements__slider-block
                     .form-elements__slider-container
@@ -82,9 +94,6 @@ html(lang="en")
                 .form-elements__pagination-block  pagination
                     .form-elements__pagination-container
                         +pagination({})
-            div.form-elements__item
-            div.form-elements__item
-            div.form-elements__item
 
                     
 

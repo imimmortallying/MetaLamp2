@@ -281,9 +281,9 @@ export class Dropdown{
 
         // working with + and - buttons
             //btns + array
-        let buttonsPlus = document.querySelectorAll('.dropdown__btn-plus');
+        let buttonsPlus = itemsContainer.querySelectorAll('.dropdown__btn-plus');
             // count elems array
-        let countElemsArray = document.querySelectorAll('.dropdown__count');
+        let countElemsArray = itemsContainer.querySelectorAll('.dropdown__count');
 
         for (let i=0; i<buttonsPlus.length; i++){
             buttonsPlus[i].addEventListener('click', ()=>{
@@ -301,7 +301,7 @@ export class Dropdown{
 
         // working with - and - buttons
             //btns - array
-        let buttonsMinus = document.querySelectorAll('.dropdown__btn-minus');
+        let buttonsMinus = itemsContainer.querySelectorAll('.dropdown__btn-minus');
         for (let i=0; i<buttonsPlus.length; i++){
             buttonsMinus[i].addEventListener('click', ()=>{
                 if (arrayOfObj[i].count > 0){
@@ -319,7 +319,7 @@ export class Dropdown{
             
             // проверка count чтобы изменить text header
             
-
+        
         }
     }
 }

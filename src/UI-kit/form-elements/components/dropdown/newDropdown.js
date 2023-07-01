@@ -1,7 +1,7 @@
 import {Dropdown} from './dropdown.js'
 let newDropdown = new Dropdown(
     {
-        containerClass: '.form-elements__dropdown-container',
+        containerClass: '.form-elements__dropdown-container-guests',
         newContainerClass: 'dropdown__container',
         itemsArray: ['взрослые','дети','младенцы', 'жулики', 'доходяги'],
         formsArray: 
@@ -18,5 +18,3 @@ let newDropdown = new Dropdown(
     })
 
 newDropdown.createDropdown();
-
-

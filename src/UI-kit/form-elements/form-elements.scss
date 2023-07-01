@@ -13,13 +13,14 @@
 @import 'components/masked-textfield/masked-textfield.scss';
 @import 'components/datepicker/datepicker.scss';
 @import 'components/subscription/subscription.scss';
+@import 'components/label/label.scss';
 
 
 .form-elements{
 
-    font-family: montserrat, sans-serif;
+    // font-family: montserrat, sans-serif;
     font-size: 14px;
-    font-weight: 400;
+    // font-weight: 400;
     // text-transform: uppercase;
 
     padding: 0 0 0 141px;
@@ -44,13 +45,24 @@
 
 .first-child{
     display: grid;
-    grid-template-rows: 85px 85px 87px 104px 105px 105px;
+    grid-template-rows: 85px 85px 87px 104px 105px 105px 164px 320px 64px 307px;
 }
 
 // переделать!!!!
 .form-elements__dropdown2_1{
-    z-index: 4;
+    z-index: 1;
     // border:none;
+
+}
+
+.form-elements__dropdown-container-rooms{
+    height: 44px;
+    // display: flex;
+    display: grid;
+    flex-direction: column;
+    gap: 20px;
+    grid-template-rows: 1fr 1fr;
+    // row-gap: 20px;
 
 }
 // second column
@@ -59,12 +71,19 @@
 .second-child{
     // background-color: #ffc4c4;
     display: grid;
-    grid-template-rows: 170px 92px 130px 91px 84px;
+    grid-template-rows: 170px 92px 130px 91px 251px 320px 381px;
 }
 
+
 //first block
+.form-elements__label{
+    display: flex;
+    justify-content: space-between;
+    width: initial;
+}
+
 .form-elements__checkbox-block{
-    background-color: #fffad1;
+    // background-color: #fffad1;
 }
 
 .form-elements__checkbox-container{
@@ -76,7 +95,7 @@
 
 //second block
 .form-elements__radio-block{
-    background-color: #ffd1d1;
+    // background-color: #ffd1d1;
 }
 
 .form-elements__radio-container{
@@ -87,7 +106,7 @@
 
 //third block
 .form-elements__toggle-block{
-    background-color: #f0ffd1;
+    // background-color: #f0ffd1;
 }
 
 .form-elements__toggle-container{

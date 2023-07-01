@@ -3,9 +3,6 @@
 .checkbox__input{
     appearance: none;
     display: none;
-    &:focus{
-        border:1px solid yellow;
-    }
     // -moz-appearance: none;
     // -webkit-appearance: none;
     // position: absolute; это свойство ничего не меняет. Из-за сброса?
@@ -33,6 +30,9 @@
 }
 
 .checkbox__description{
+    font-size: 14px;
+    font-family: $font-Montserrat;
+    color:rgba(31, 32, 65, 0.5);
     line-height: 18px;
     text-align: left;
     max-width: 216px;
@@ -43,14 +43,18 @@
     text-align: left;
     max-width: 216px;
     font-size: 12px;
+    font-family: $font-Montserrat;
+    color:rgba(31, 32, 65, 0.5);
 }
 
 .checkbox__title_rich{
-    font-weight: bold;
     text-align: left;
-    font-size: 14px;
     line-height: 20px;
     margin-bottom: 4px;
+    font-size: 14px;
+    color: rgba(31, 32, 65, 0.75);
+    font-family: $font-Montserrat;
+    font-weight: bold;
 }
 
 .checkbox__container_rich{
