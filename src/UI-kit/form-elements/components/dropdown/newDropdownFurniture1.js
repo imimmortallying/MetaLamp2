@@ -20,7 +20,7 @@ newDropdown2.createDropdown();
 
 let newDropdown3 = new Dropdown(
     {
-        containerClass: '.form-elements__dropdown-container-rooms',
+        containerClass: '.form-elements__dropdown-container-rooms2',
         newContainerClass: 'dropdown__container2',
         itemsArray: ['спальни','кровати','ванные комнаты'],
         formsArray: 

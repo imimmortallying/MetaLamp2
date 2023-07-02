@@ -20,6 +20,17 @@
     height: 44px;
     border-radius: 4px;
     padding: 0px 5px;
+
+    font-size: 14px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    color:rgba(31, 32, 65, 0.75);
+}
+
+.textfield__input::placeholder{
+    color: rgba(31, 32, 65, 0.25);
+    font-size: 14px;
+    font-family: 'Montserrat', Arial, sans-serif;
+
 }
 
 .textfield__input:hover{
@@ -28,4 +39,19 @@
 
 .textfield__input:focus{
     border: rgba(31, 32, 65, 0.5) 1px solid;
+}
+
+.textfield__title{
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: $font-Montserrat;
+    font-weight: 700;
+    color: rgba(31, 32, 65, 1);
+}
+
+.textfield__description{
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    color:rgba(31, 32, 65, 0.5);
 }

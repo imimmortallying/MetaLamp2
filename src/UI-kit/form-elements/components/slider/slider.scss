@@ -6,9 +6,22 @@
 .slider{
     display: flex;
     flex-direction: column;
+
+    font-family: $font-Montserrat;
 }
 
+.slider__description{
+    color:rgba(31, 32, 65, 1);
+    font-weight: bold;
+    text-transform: uppercase;
+    
+}
+
+.slider__values{
+    color: rgba(31, 32, 65, 0.5);
+}
 .slider__header {
+    font-size: 12px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

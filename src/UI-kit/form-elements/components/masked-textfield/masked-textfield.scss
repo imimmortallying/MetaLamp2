@@ -19,9 +19,24 @@
     width: 100%;
     height: 44px;
     border-radius: 4px;
-    padding: 0px 5px;
+    padding: 0px 15px;
 }
 
 .masked-textfield__input:hover, .masked-textfield__input:focus{
     border: rgba(1, 1, 15, 0.5) 1px solid;
+}
+
+.masked-textfield__title{
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: $font-Montserrat;
+    font-weight: 700;
+    color: rgba(31, 32, 65, 1);
+}
+
+.masked-textfield__input::placeholder{
+    color: rgba(31, 32, 65, 0.25);
+    font-size: 14px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    padding-left: 0px;
 }

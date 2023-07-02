@@ -4,6 +4,8 @@
     display: flex;
     flex-direction: column;
     width: 267px;
+
+    font-family: 'Montserrat', Arial, sans-serif;
 }
 
 .subscription__header{
@@ -20,7 +22,13 @@
     height: 44px;
     border-radius: 4px;
     padding: 0px 5px;
+    color:rgba(31, 32, 65, 0.75);
+    font-size: 14px;
 
+}
+
+.subscription__input::placeholder{
+    color:rgba(31, 32, 65, 0.25);
 }
 
 .subscription__input:hover{
@@ -44,4 +52,9 @@
         top: 0%;
         right: 0;
     }
+}
+
+.subscription__title{
+    font-size: 12px;
+    font-weight: bold;
 }

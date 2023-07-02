@@ -1,4 +1,6 @@
-
+.pagination{
+    font-family: $font-Montserrat;
+}
 
 .pagination__container{
     // background-color: #ffc8c8;
@@ -13,6 +15,10 @@
     border-radius: 50%;
     background-color: #fff;
     flex-shrink: 0;
+
+    color:rgba(31, 32, 65, 0.5);
+    font-size: 12px;
+    
 }
 
 .pagination__item_arrowed{
@@ -20,11 +26,15 @@
 }
 
 .pagination__description{
-    background-color: #e2ffc1;
+    // background-color: #e2ffc1;
+    color: rgba(31, 32, 65, 0.75);
+    font-size: 14px;
+
 }
 
 .pagination__item_active{
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    color: rgba(255, 255, 255, 1);
 }
 
 
