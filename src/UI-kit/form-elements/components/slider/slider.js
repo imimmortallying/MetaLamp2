@@ -1,4 +1,4 @@
-import './slider.pug';
+// import './slider.pug';
 
 const rangeInput = document.querySelectorAll('.slider__range');
 const progress = document.querySelector('.slider__progress');

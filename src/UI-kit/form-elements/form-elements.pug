@@ -10,6 +10,8 @@ include components/masked-textfield/masked-textfield
 include components/datepicker/datepicker
 include components/subscription/subscription
 include components/label/label
+include components/expandable-checkbox-list/expandable-checkbox-list
+include components/bulletlist/bulletlist
 
 doctype html
 html(lang="en")
@@ -42,9 +44,31 @@ html(lang="en")
                     })
                 +subscription({header: true, title:'subscription textfield', type:'email', placeholder: 'Email'})
                 div.form-elements__dropdown-container-rooms
-                    +label({newClass:'form-elements__label', labelLeft:'dropdown', labelRight:'default'})
+                    +label({newClass:'form-elements__label', labelLeft:'dropdown', labelRight:'default', width:'narrow'})
                 div.form-elements__dropdown-container-rooms2
-                    +label({newClass:'form-elements__label', labelLeft:'dropdown', labelRight: 'expanded'})
+                    +label({newClass:'form-elements__label', labelLeft:'dropdown', labelRight: 'expanded', width:'narrow'})
+                .form-elements__expandable-checkbox-list
+                    +expandable-checkbox-list(
+                        {items:[
+                            {text:'Завтрак'}, 
+                            {text:'Письменный стол', checked:true}, 
+                            {text:'Стул для кормления', checked:true},
+                            {text:'Кроватка', checked:true},
+                            {text:'Телевизор'}, 
+                            {text:'Шампунь'}, 
+                            ],
+                        headerTitle:'expandable checkbox list'})
+                .form-elements__expandable-checkbox-list
+                    +expandable-checkbox-list(
+                            {items:[
+                                {text:'Завтрак'}, 
+                                {text:'Письменный стол', checked:true}, 
+                                {text:'Стул для кормления', checked:true},
+                                {text:'Кроватка', checked:true},
+                                {text:'Телевизор'}, 
+                                {text:'Шампунь'}, 
+                                ],
+                            headerTitle:'expandable checkbox list'})
 
             div.form-elements__item.second-child
                 .form-elements__checkbox-block
@@ -71,9 +95,10 @@ html(lang="en")
                     .form-elements__rate-button-container
                 .form-elements__dropdown-container-guests2 
                     +label({newClass:'form-elements__label', labelLeft:'dropdown'})
-                .form-elements__rich-checkbox-buttons
-                    +checkbox({description:'Ширина коридоров в номере не менее 91см', rich: true, title: 'Широкий коридор'})
-                    +checkbox({description:'На первом этаже вас встретит специалист и проводит до номера', rich: true, title: 'Помощник для инвалидов'})
+                .form-elements__rich-checkbox-container
+                    +label({newClass:'form-elements__label', labelLeft:'checkbox buttons'})
+                    +checkbox({description:'Ширина коридоров в номере не менее 91 см', rich: true, title: 'Широкий коридор'})
+                    +checkbox({description:'На 1 этаже вас встретит специалист и проводит до номера', rich: true, title: 'Помощник для инвалидов'})
             div.form-elements__item
                 div.form-elements__slider-block
                     .form-elements__slider-container
@@ -98,6 +123,15 @@ html(lang="en")
                     +label({newClass:'form-elements__label', labelLeft:'pagination'})
                     .form-elements__pagination-container
                         +pagination({})
+                div.form-elements__dropdown-container-guests3
+                    +label({newClass:'form-elements__label', labelLeft:'dropdown'})
+                .form-elements__bulletlist-container
+                    +bulletlist({items:[
+                        'Нельзя с питомцами',
+                        'Без вечеринок и мероприятий',
+                        'Время прибытия - после 13:00, а выезд до 12:00',
+                        ],
+                        headerTitle: 'bulletlist'})
 
                     
 

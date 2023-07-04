@@ -14,6 +14,8 @@
 @import 'components/datepicker/datepicker.scss';
 @import 'components/subscription/subscription.scss';
 @import 'components/label/label.scss';
+@import 'components/expandable-checkbox-list/expandable-checkbox-list.scss';
+@import 'components/bulletlist/bulletlist.scss';
 
 
 .form-elements{
@@ -45,7 +47,7 @@
 
 .first-child{
     display: grid;
-    grid-template-rows: 85px 85px 87px 104px 105px 105px 164px 84px 236px 304px;
+    grid-template-rows: 85px 85px 87px 104px 105px 105px 164px 84px 236px min-content auto;
 }
 
 // переделать!!!!
@@ -54,16 +56,29 @@
     // border:none;
 
 }
-
-.form-elements__dropdown-container-rooms{
-    height: 44px;
-    // display: flex;
-    display: grid;
+.form-elements__dropdown-container-guests{
+    display: flex;
     flex-direction: column;
-    gap: 20px;
-    grid-template-rows: 1fr 1fr;
-    // row-gap: 20px;
+    gap: 5px;
+}
+.form-elements__dropdown-container-rooms{
 
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+}
+
+.form-elements__dropdown-container-rooms2{
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+}
+
+.form-elements__expandable-checkbox-list{
+    margin-bottom: 49px;
 }
 // second column
 // разберись с этим классом, как его задать через child
@@ -74,13 +89,13 @@
     grid-template-rows: 170px 92px 130px 91px 251px 320px 381px;
 }
 
-
-//first block
-.form-elements__label{
+.form-elements__rich-checkbox-container{
     display: flex;
-    justify-content: space-between;
-    width: initial;
+    flex-direction: column;
+    gap: 17px;
 }
+//first block
+
 
 .form-elements__checkbox-block{
     // background-color: #fffad1;
@@ -137,6 +152,11 @@
     gap: 20px;
 }
 
+.form-elements__dropdown-container-guests2{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
 
 
 // third column
@@ -200,8 +220,19 @@
 // pagination
 
 .form-elements__pagination-block{
-display: flex;
-flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+   
 }
 
+.form-elements__dropdown-container-guests3{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 239px;
+}
 
+.form-elements__bulletlist-container{
+    margin-top: 257px;
+}

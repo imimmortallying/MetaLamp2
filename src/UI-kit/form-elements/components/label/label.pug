@@ -4,8 +4,10 @@ mixin label(options={})
             newClass = '',
             labelLeft = '',
             labelRight = '',
+            width = 'wide',
         } = options;
 
     div(class=options.newClass)
-        div.label__label-left=options.labelLeft
-        div.label__label-right=options.labelRight
+        div.label(class='label'+'_'+width)
+            div.label__label-left=options.labelLeft
+            div.label__label-right=options.labelRight

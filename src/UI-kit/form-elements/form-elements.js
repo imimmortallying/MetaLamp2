@@ -12,4 +12,5 @@ import './components/dropdown/newDropdown.js'
 import './components/dropdown/newDropdownFurniture1.js'
 import './components/masked-textfield/masked-textfield.js'
 import './components/datepicker/datepicker.js'
+import './components/expandable-checkbox-list/expandable-checkbox-list.js'
 

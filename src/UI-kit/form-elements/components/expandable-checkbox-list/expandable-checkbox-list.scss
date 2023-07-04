@@ -1,0 +1,47 @@
+
+.expandable-checkbox-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    width: 266px;
+}
+
+.expandable-checkbox-list__header{
+    text-align: left;
+    position: relative;
+
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: rgba(31, 32, 65, 1);
+}
+
+.expandable-checkbox-list__header:after{
+    position: absolute;
+    content: '';
+    background-image: url(/src/icons/expand_more.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    bottom: 0px;
+    right: 0px;
+    height: 16px;
+    width: 16px;
+
+    transition: transform 0.15s linear;
+}
+
+.expandable-checkbox-list__header_active::after{
+    transform: rotate(-180deg);
+}
+
+.expandable-checkbox-list__items{
+    
+    display: none;
+}
+
+.expandable-checkbox-list__items_active{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

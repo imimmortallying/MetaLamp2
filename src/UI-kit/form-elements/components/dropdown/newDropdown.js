@@ -3,6 +3,8 @@ let newDropdown = new Dropdown(
     {
         containerClass: '.form-elements__dropdown-container-guests',
         newContainerClass: 'dropdown__container',
+        headerText: 'Сколько гостей',
+        elementWidth: 'wide', // narrow=266 or wide=320
         itemsArray: ['взрослые','дети','младенцы', 'жулики', 'доходяги'],
         formsArray: 
             [
@@ -14,7 +16,7 @@ let newDropdown = new Dropdown(
             ],
             // важно либо правильно заполнить массив, либо оставить его пустым
         mergeArray: [['взрослые', 'дети']],
-        mergeForms: [{f1:'гость',f2:'гостя',f3:'гостей'}]
+        mergeForms: [{f1:'гость',f2:'гостя',f3:'гостей'}, {f1:'блядь',f2:'бляди',f3:'блядей'}]
     })
 
 newDropdown.createDropdown();

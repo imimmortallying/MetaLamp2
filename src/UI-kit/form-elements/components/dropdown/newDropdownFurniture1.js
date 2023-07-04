@@ -2,8 +2,10 @@ import {Dropdown} from './dropdown.js'
 let newDropdown2 = new Dropdown(
     {
         containerClass: '.form-elements__dropdown-container-rooms',
-        newContainerClass: 'dropdown__container1',
+        newContainerClass: 'dropdown__container',
         itemsArray: ['спальни','кровати','ванные комнаты'],
+        headerText: 'Выберите удобства',
+        elementWidth: 'narrow', // narrow=266 or wide=320
         formsArray: 
             [
                 {f1:'спальня',f2:'спальни',f3:'спален'},
@@ -21,7 +23,9 @@ newDropdown2.createDropdown();
 let newDropdown3 = new Dropdown(
     {
         containerClass: '.form-elements__dropdown-container-rooms2',
-        newContainerClass: 'dropdown__container2',
+        newContainerClass: 'dropdown__container',
+        headerText: 'Выберите удобства',
+        elementWidth: 'narrow',
         itemsArray: ['спальни','кровати','ванные комнаты'],
         formsArray: 
             [
@@ -42,6 +46,8 @@ let newDropdown4 = new Dropdown(
         containerClass: '.form-elements__dropdown-container-guests2',
         newContainerClass: 'dropdown__container',
         itemsArray: ['взрослые','дети','младенцы'],
+        headerText: 'Сколько гостей',
+        elementWidth: 'wide',
         formsArray: 
             [
                 {f1:'взрослый',f2:'взрослых',f3:'взрослых'},
@@ -55,3 +61,24 @@ let newDropdown4 = new Dropdown(
     })
 
 newDropdown4.createDropdown();
+
+let newDropdown5 = new Dropdown(
+    {
+        containerClass: '.form-elements__dropdown-container-guests3',
+        newContainerClass: 'dropdown__container',
+        itemsArray: ['взрослые','дети','младенцы'],
+        headerText: 'Сколько гостей',
+        elementWidth: 'wide',
+        formsArray: 
+            [
+                {f1:'взрослый',f2:'взрослых',f3:'взрослых'},
+                {f1:'ребенок',f2:'ребенка',f3:'детей'},
+                {f1:'младенец',f2:'младенца',f3:'младенцев'},
+
+            ],
+            // важно либо правильно заполнить массив, либо оставить его пустым
+        mergeArray: [['взрослые', 'дети']],
+        mergeForms: [{f1:'гость',f2:'гостя',f3:'гостей'}]
+    })
+
+newDropdown5.createDropdown();

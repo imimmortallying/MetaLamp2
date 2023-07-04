@@ -1,0 +1,12 @@
+mixin bulletlist (options={})
+    -
+        const {
+            items = '',
+            headerTitle = '',
+        } = options;
+
+    .bulletlist
+        .bulletlist__header=options.headerTitle
+        ul.bulletlist__items 
+            each val in items
+                li.bulletlist__item=val

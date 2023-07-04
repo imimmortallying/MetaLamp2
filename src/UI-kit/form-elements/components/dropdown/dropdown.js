@@ -8,18 +8,20 @@ export class Dropdown{
         this.formsArray = options.formsArray;
         this.mergeArray = options.mergeArray;
         this.mergeForms = options.mergeForms;
-        this.titleText = options.titleText;
+        this.headerText = options.headerText;
+        this.elementWidth = options.elementWidth;
     }
 
     createDropdown(){
         let newContainerElem = document.createElement('div');
         newContainerElem.className = this.newContainerClass
+        newContainerElem.classList.add(this.newContainerClass+'_'+this.elementWidth)
         let containerElem = document.querySelector(`${this.containerClass}`);
         containerElem.append(newContainerElem);
         //header
         let header = document.createElement('div');
         header.classList.add('dropdown__header');
-        header.innerText = 'Сколько гостей';
+        header.innerText = this.headerText;
         newContainerElem.append(header);
 
 
@@ -49,7 +51,7 @@ export class Dropdown{
         if (this.mergeArray != null){
             isArray = true
         }
-        console.log(isArray)
+
         // console.log(arrayOfObj);
         // если включено слияние элементов, то создается дополнительный промежуточный объект, который будет формировать хэдер
 
@@ -65,16 +67,17 @@ export class Dropdown{
                 // console.log(result)
                 this.mergeArray.forEach((item) => {
                 const [firstItem, ...itemsWithoudFirst] = item;
-                // console.log(firstItem ) // взрослые, жулики
-                // console.log(itemsWithoudFirst) // ... => ['дети', 'младенцы'], ['доходяги']
+                // console.log('firstItem',firstItem ) // взрослые, жулики
+                // console.log('itemsWithoutF',itemsWithoudFirst) // ... => ['дети', 'младенцы'], ['доходяги']
 
                 const entities = itemsWithoudFirst.map(i => mergedArray.find(kek => kek.name === i));
                 // console.log(entities) // [{name: 'дети'}, {name: 'младенцы'}], [{name: 'доходяги'}]
-                
+                // console.log('ent',entities)
                 const sum = entities.reduce((sum, current) => sum + current.count, 0);
                 // console.log(sum) // сумма count объектов из entities, т.е. от непервых объектов
-
+                // console.log('mergedBefore',mergedArray);
                 mergedArray = mergedArray.map((arrItem) => {
+                    // console.log('arritem',arrItem.name)
                     if(firstItem === arrItem.name) {
                             return {
                                 ...arrItem, count: arrItem.count + sum, 
@@ -83,25 +86,42 @@ export class Dropdown{
                     if(itemsWithoudFirst.includes(arrItem.name)) {
                         return null;
                     }
+                    // console.log('mergedAfter',mergedArray)
+                    // for (let i=0; i<this.mergeArray.length; i++){
+                    //     // console.log(this.mergeArray[i][0])
+                    //     if (arrItem.name == this.mergeArray[i][0]){
+                    //         // console.log(arrItem.name)
+                    //         // console.log(this.mergeArray[i][0])
+
+                    //         arrItem.form1 = this.mergeForms[i].f1
+                    //         arrItem.form2 = this.mergeForms[i].f2
+                    //         arrItem.form3 = this.mergeForms[i].f3
+                    //     }
+                    // }
+                    // console.log('arritem after',arrItem.name)
+                        return arrItem;
+                }).filter(i => i);
+
+                    
+                }
+                
+                )
+                mergedArray.forEach(el=>{
                     for (let i=0; i<this.mergeArray.length; i++){
-                        if (arrItem.name == this.mergeArray[i][0]){
-                            arrItem.form1 = this.mergeForms[i].f1
-                            arrItem.form2 = this.mergeForms[i].f2
-                            arrItem.form3 = this.mergeForms[i].f3
+                        if (el.name == this.mergeArray[i][0]){
+                            el.form1 = this.mergeForms[i].f1;
+                            el.form2 = this.mergeForms[i].f2;
+                            el.form3 = this.mergeForms[i].f3;
                         }
                     }
-
-                        return arrItem;
-                }).filter(i => i)
                 })
-
                 // меняю формы склонения в новом объекте
                 
     
          
     
-            // console.log(arrayOfObj);
-            console.log(mergedArray);
+            // console.log('arrayOfObj',arrayOfObj);
+            // console.log('merged',mergedArray);
         }
         // mergeArrayForHeader()
         ////////
@@ -168,7 +188,7 @@ export class Dropdown{
                 arrayOfObj[i].count = 0;
                 countElemsArray[i].innerText = arrayOfObj[i].count;
                 headerArr = [];
-                header.innerText = 'Сколько гостей';
+                header.innerText = this.headerText;
                 buttonClean.classList.remove('dropdown__clean-btn_active')
             }
         })
@@ -180,10 +200,11 @@ export class Dropdown{
         })
 
         // функция проверки пустоты текста хэдера
-        function checkCount(){
+        let checkCount = ()=>{
             // console.log(headerArr);
             if (headerArr.filter(i=>i).length == 0){
-                header.innerText = 'Сколько гостей';
+                header.innerText = this.headerText;
+                buttonClean.classList.remove('dropdown__clean-btn_active');
             }else if (headerArr.filter(i=>i).length != 0 && !buttonClean.classList.contains('dropdown__clean-btn_active')){
                 buttonClean.classList.add('dropdown__clean-btn_active')
             }
@@ -254,7 +275,7 @@ export class Dropdown{
             if (isArray){
                 currentArray = mergedArray;
             } else currentArray = arrayOfObj;
-            console.log(currentArray)
+            // console.log('current', currentArray)
             for (let obj of currentArray){
                 // console.log(obj)
                 let num;

@@ -1,0 +1,12 @@
+mixin expandable-checkbox-list (options={})
+    -
+        const {
+            items = '',
+            headerTitle = '',
+        } = options;
+
+    .expandable-checkbox-list 
+        .expandable-checkbox-list__header=options.headerTitle
+        .expandable-checkbox-list__items 
+            each val in items
+                +checkbox({description: val.text, checked: val.checked})
