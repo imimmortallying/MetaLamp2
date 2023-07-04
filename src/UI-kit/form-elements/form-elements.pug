@@ -26,26 +26,26 @@ html(lang="en")
             div.form-elements__item.first-child
                 +textfield({header: true, title:'text field', description:'default', type:'email', placeholder: 'Email'})
                 +textfield({header: true, title:'text field', description:'hover/focus', type:'text', value: 'This is pretty awesome', placeholder: 'Email'})
-                div.form-elements__dropdown-container-guests
+                div.form-elements__dropdown-container-guests.form-elements__dropdown-container-guests_z-index_5
                     +label({newClass:'form-elements__label', labelLeft:'dropdown'})
                 +masked-textfield({header: true, title:'masked text field', type:'tel', placeholder: "ДД.ММ.ГГГГ"})
-                .form-elements__dropdown2_1
+                .form-elements__dropdown.form-elements__dropdown_z-index_4
                     +datepicker({
                     name: 'date-regular',
                     headerArrival: 'date dropdown',
                     headerDeparture: 'date dropdown',
                     headerCommon: 'даты пребывания в отеле',
                     })
-                .form-elements__dropdown2
+                .form-elements__dropdown.form-elements__dropdown_z-index_3
                     +datepicker({
                     name: 'date-filter',
                     headerCommon: 'filter date dropdown',
                     modifier: 'filter',
                     })
                 +subscription({header: true, title:'subscription textfield', type:'email', placeholder: 'Email'})
-                div.form-elements__dropdown-container-rooms
+                div.form-elements__dropdown-container-rooms.form-elements__dropdown-container-rooms_z-index_2
                     +label({newClass:'form-elements__label', labelLeft:'dropdown', labelRight:'default', width:'narrow'})
-                div.form-elements__dropdown-container-rooms2
+                div.form-elements__dropdown-container-rooms2.form-elements__dropdown-container-rooms2_z-index_1
                     +label({newClass:'form-elements__label', labelLeft:'dropdown', labelRight: 'expanded', width:'narrow'})
                 .form-elements__expandable-checkbox-list
                     +expandable-checkbox-list(

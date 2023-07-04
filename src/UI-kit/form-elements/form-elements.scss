@@ -50,23 +50,40 @@
     grid-template-rows: 85px 85px 87px 104px 105px 105px 164px 84px 236px min-content auto;
 }
 
-// переделать!!!!
-.form-elements__dropdown2_1{
-    z-index: 1;
-    // border:none;
 
-}
 .form-elements__dropdown-container-guests{
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
+
+.form-elements__dropdown-container-guests_z-index_5{
+    z-index: 5;
+}
+
+.form-elements__dropdown_z-index_4{
+    z-index: 4;
+}
+
+.form-elements__dropdown_z-index_3{
+    z-index: 3;
+}
+
+
 .form-elements__dropdown-container-rooms{
 
     display: flex;
     flex-direction: column;
     gap: 5px;
 
+}
+// zzzz index
+.form-elements__dropdown-container-rooms_z-index_2{
+    z-index: 2;
+}
+
+.form-elements__dropdown-container-rooms2_z-index_1{
+    z-index: 1;
 }
 
 .form-elements__dropdown-container-rooms2{
