@@ -16,6 +16,7 @@
 @import 'components/label/label.scss';
 @import 'components/expandable-checkbox-list/expandable-checkbox-list.scss';
 @import 'components/bulletlist/bulletlist.scss';
+@import 'components/benefit/benefit.scss';
 
 
 .form-elements{
@@ -47,7 +48,7 @@
 
 .first-child{
     display: grid;
-    grid-template-rows: 85px 85px 87px 104px 105px 105px 164px 84px 236px min-content auto;
+    grid-template-rows: 85px 85px 87px 104px 105px 105px 164px 84px 236px min-content 307px 65px 65px;
 }
 
 

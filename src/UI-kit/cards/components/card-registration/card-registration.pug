@@ -1,0 +1,33 @@
+
+
+mixin card-registration(options={})
+    -
+        const {
+            newClass = '',
+            labelLeft = '',
+            labelRight = '',
+            width = 'wide',
+        } = options;
+
+    .card-registration
+        .card-registration__header Регистрация аккаунта
+        .card-registration__textfield-name
+            +textfield({header: false, type:'text', placeholder: 'Имя'})
+        .card-registration__textfield-surname
+            +textfield({header: false, type:'text', placeholder: 'Фамилия'})
+        .card-registration__radio
+            +radio({description: ['Мужчина','Женщина'], value: ['male','female'], container_class: 'card-registration__radio-container', checked: 'true'})
+        .card-registration__masked-textfield
+            +masked-textfield({header: true, title:'Дата рождения', type:'tel', placeholder: "ДД.ММ.ГГГГ"})
+        .card-registration__textfield-email
+            +textfield({header: true, type:'Email', placeholder: 'Email', title:'Данные для входа в сервис'})
+        .card-registration__textfield-password
+            +textfield({header: false, type:'Password', placeholder: 'Пароль'})
+        .card-registration__toggle
+            +toggle({description:'Получать спецпредложения' })
+        .card-registration__button
+            +button({theme:"full", text:"перейти к оплате", width:'wide', isArrowed:true})
+        .card-registration__footer
+            .card-registration__title Уже есть аккаунт на Toxin
+            .card-registration__button
+                +button({theme:"hollow", text:"click me", width:'regular'})

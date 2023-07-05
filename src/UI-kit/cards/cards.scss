@@ -1,0 +1,31 @@
+
+@use '../../styles/reset.css';
+// @use '../../styles/variables.scss';
+
+@use 'components/card-find/card-find.scss';
+@use '../../UI-kit/form-elements/components/button/button.scss';
+@use '../../UI-kit/form-elements/components/datepicker/datepicker.scss';
+@use '../../UI-kit/form-elements/components/dropdown/dropdown.scss';
+@use '../../UI-kit/form-elements/components/label/label.scss';
+
+@use 'components/card-registration/card-registration.scss';
+@use '../../UI-kit/form-elements/components/radio/radio.scss';
+@use '../../UI-kit/form-elements/components/masked-textfield/masked-textfield.scss';
+@use '../../UI-kit/form-elements/components/toggle/toggle.scss';
+@use '../../UI-kit/form-elements/components/textfield/textfield.scss';
+
+
+
+.cards{
+    display: grid;
+
+    grid-template-columns: 380px 380px 320px;
+    padding-left: 140px;
+    background-color: rgba(31, 32, 65, 0.1);
+}
+
+.cards__item{
+   display: flex;
+   flex-direction: column;
+   gap: 40px;
+}

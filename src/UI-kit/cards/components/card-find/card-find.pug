@@ -1,0 +1,25 @@
+
+
+mixin card-find(options={})
+    -
+        const {
+            newClass = '',
+            labelLeft = '',
+            labelRight = '',
+            width = 'wide',
+        } = options;
+
+    .card-find
+        .card-find__header Найдем номера под ваши пожелания
+        .card-find__body 
+            .card-find__datepicker 
+                +datepicker({
+                    name: 'date-regular',
+                    headerArrival: 'прибытие',
+                    headerDeparture: 'выезд',
+                    headerCommon: 'даты пребывания в отеле',
+                    })
+            .card-find__dropdown 
+                +label({newClass:'room-selection__label', labelLeft:'гости'})
+            .card-find__button
+                +button({theme:"full", text:"Подобрать номер", width:'wide', isArrowed:true})

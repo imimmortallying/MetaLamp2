@@ -1,0 +1,45 @@
+
+.card-find{
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    // justify-content: right;
+    
+    height: 380px;
+    width: 374px;
+
+    padding: 40px 30px;
+    align-items: center;
+
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background: #FFF;
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.20);
+}
+
+.card-find__header{
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: rgba(31, 32, 65, 1);
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.card-find__body{
+    display: flex;
+    flex-direction: column;
+}
+
+.card-find__datepicker{
+    z-index: 2;
+}
+
+.card-find__dropdown{
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    padding-top: 21px;
+    padding-bottom: 31px;
+}

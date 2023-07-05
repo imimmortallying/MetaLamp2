@@ -1,0 +1,28 @@
+include components/card-find/card-find
+include ../../UI-kit/form-elements/components/datepicker/datepicker
+include ../../UI-kit/form-elements/components/button/button
+include ../../UI-kit/form-elements/components/label/label
+
+include components/card-registration/card-registration
+include ../../UI-kit/form-elements/components/textfield/textfield
+include ../../UI-kit/form-elements/components/radio/radio
+include ../../UI-kit/form-elements/components/masked-textfield/masked-textfield
+include ../../UI-kit/form-elements/components/toggle/toggle
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+    body 
+        .cards__header
+        .cards 
+            .cards__item
+                .cards__card-find 
+                    +card-find
+                .cards__card-registration
+                    +card-registration
+            .cards__item
+            .cards__item

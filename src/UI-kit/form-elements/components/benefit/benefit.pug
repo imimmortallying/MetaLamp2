@@ -1,0 +1,14 @@
+mixin benefit(options={})
+    -
+        const {
+            title = '',
+            description = '',
+            imgName = '',
+            imgSrc = '',
+        } = options;
+
+    div.benefit
+        img.benefit__img
+        div.benefit__textbox
+            div.benefit__title=options.title
+            div.benefit__description=options.description

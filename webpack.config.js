@@ -12,6 +12,7 @@ const pugEntries = {
   // 'header': 'src/UI-kit/headers-footers/header/header',
   // 'footer': 'src/UI-kit/headers-footers/footer/footer',
   'form-elements': 'src/UI-kit/form-elements/form-elements',
+  'cards': 'src/UI-kit/cards/cards',
   // 'colors-type': 'src/UI-kit/colors-type/colors-type',
 }
 
@@ -36,6 +37,7 @@ module.exports ={
     // entry: path.resolve(__dirname, 'src/UI-kit/headers-footers/header', 'index.js'),
     entry: {
       'form-elements': './src/UI-kit/form-elements/form-elements.js',
+      'cards': './src/UI-kit/cards/cards.js',
       // 'colors-type': './src/UI-kit/colors-type/colors-type.js',
       // 'form-elements':{
       //   import:'./src/UI-kit/form-elements/form-elements.js',

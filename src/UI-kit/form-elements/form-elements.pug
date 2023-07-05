@@ -12,6 +12,8 @@ include components/subscription/subscription
 include components/label/label
 include components/expandable-checkbox-list/expandable-checkbox-list
 include components/bulletlist/bulletlist
+include components/benefit/benefit
+
 
 doctype html
 html(lang="en")
@@ -69,7 +71,9 @@ html(lang="en")
                                 {text:'Шампунь'}, 
                                 ],
                             headerTitle:'expandable checkbox list'})
-
+                .form-elements__benefit 
+                    +benefit({title:'Комфорт', description:'Шумопоглащающие стены', imgSrc: '../../img/insert_emoticon.svg'})
+                .form-elements__advantage
             div.form-elements__item.second-child
                 .form-elements__checkbox-block
                     +label({newClass:'form-elements__label', labelLeft:'checkbox buttons'})
