@@ -9,6 +9,10 @@ include ../../UI-kit/form-elements/components/radio/radio
 include ../../UI-kit/form-elements/components/masked-textfield/masked-textfield
 include ../../UI-kit/form-elements/components/toggle/toggle
 
+include components/card-booking/card-booking
+
+include components/card-entering/card-entering
+
 doctype html
 html(lang="en")
     head
@@ -25,4 +29,8 @@ html(lang="en")
                 .cards__card-registration
                     +card-registration
             .cards__item
+                .cards__booking
+                    +card-booking
+                .cards__entering
+                    +card-entering
             .cards__item

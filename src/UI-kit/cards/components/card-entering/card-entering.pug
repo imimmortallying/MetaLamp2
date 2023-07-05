@@ -1,0 +1,23 @@
+
+
+mixin card-entering(options={})
+    -
+        const {
+            newClass = '',
+            labelLeft = '',
+            labelRight = '',
+            width = 'wide',
+        } = options;
+
+    .card-entering
+        .card-entering__header Войти
+        .card-entering__textfield-email
+            +textfield({header: false, type:'Email', placeholder: 'Email'})
+        .card-entering__textfield-password
+            +textfield({header: false, type:'Password', placeholder: 'Пароль'})
+        .card-entering__button-enter
+            +button({theme:"full", text:"Подобрать номер", width:'wide', isArrowed:true})
+        .card-entering__footer
+            .card-entering__title Нет аккаунта на Toxin?
+            .card-entering__button-create
+                +button({theme:"hollow", text:"Создать", width:'regular'})

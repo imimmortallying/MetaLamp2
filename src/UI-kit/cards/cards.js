@@ -4,4 +4,6 @@ import '../../fonts/fonts.scss';
 
 import './components/card-find/card-find'
 import '../../UI-kit/form-elements/components/datepicker/datepicker';
-// import '../../UI-kit/form-elements/components/dropdown/dropdown';
+
+import './components/card-booking/card-booking'
+

@@ -14,10 +14,13 @@
 @use '../../UI-kit/form-elements/components/toggle/toggle.scss';
 @use '../../UI-kit/form-elements/components/textfield/textfield.scss';
 
+@use 'components/card-booking/card-booking.scss';
 
+@use 'components/card-entering/card-entering.scss';
 
 .cards{
     display: grid;
+    gap: 40px;
 
     grid-template-columns: 380px 380px 320px;
     padding-left: 140px;
