@@ -15,6 +15,7 @@ const pugEntries = {
   'cards': 'src/UI-kit/cards/cards',
   'headers-footers': 'src/UI-kit/headers-footers/headers-footers',
   'landing-page': 'src/pages/landing-page/landing-page',
+  'search-room': 'src/pages/search-room/search-room',
   // 'colors-type': 'src/UI-kit/colors-type/colors-type',
 }
 
@@ -42,6 +43,7 @@ module.exports ={
       'cards': './src/UI-kit/cards/cards.js',
       'headers-footers': './src/UI-kit/headers-footers/headers-footers.js',
       'landing-page': './src/pages/landing-page/landing-page.js',
+      'search-room': './src/pages/search-room/search-room.js',
  
     },
     output: {

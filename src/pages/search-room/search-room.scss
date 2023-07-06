@@ -1,0 +1,72 @@
+@use '../../styles/reset.css';
+// @use '../../styles/variables.scss';
+
+
+@use '../../UI-kit/form-elements/components/button/button.scss';
+@use '../../UI-kit/form-elements/components/datepicker/datepicker.scss';
+@use '../../UI-kit/form-elements/components/dropdown/dropdown.scss';
+@use '../../UI-kit/form-elements/components/label/label.scss';
+
+@use '../../UI-kit/headers-footers/footer/footer.scss';
+@use '../../UI-kit/headers-footers/header/header.scss';
+
+@use '../../UI-kit/form-elements/components/subscription/subscription.scss';
+@use '../../UI-kit/form-elements/components/slider/slider.scss';
+@use '../../UI-kit/form-elements/components/checkbox/checkbox.scss';
+@use '../../UI-kit/form-elements/components/expandable-checkbox-list/expandable-checkbox-list.scss';
+
+.search-room_main{
+    display: flex;
+    flex-direction: column;
+}
+
+.search-room__sideblock{
+    display: flex;
+    flex-direction: column;
+
+    width: 266px;
+}
+
+.search-room__datepicker{
+    padding-bottom: 20px;
+}
+
+.search-room__dropdown-guests{
+   padding-bottom: 30px; 
+}
+
+.search-room__label{
+    padding-bottom: 5px;
+}
+
+.search-room__description{
+    padding-top: 14px;
+
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: rgba(31, 32, 65, 0.5);
+    font-size: 12px;
+}
+
+.search-room__slider{
+    padding-bottom: 30px;
+}
+
+.search-room__chechbox-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    padding-bottom: 30px;
+}
+
+.search-room__rich-chechbox-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    padding-bottom: 30px;
+}
+
+.search-room__dropdown-rooms{
+    padding-bottom: 30px;
+}

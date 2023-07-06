@@ -1,0 +1,71 @@
+
+include ../../UI-kit/form-elements/components/datepicker/datepicker
+include ../../UI-kit/form-elements/components/button/button
+include ../../UI-kit/form-elements/components/label/label
+
+include ../../UI-kit/headers-footers/footer/footer
+include ../../UI-kit/form-elements/components/subscription/subscription
+
+include ../../UI-kit/headers-footers/header/header
+
+include ../../UI-kit/form-elements/components/slider/slider
+include ../../UI-kit/form-elements/components/checkbox/checkbox
+include ../../UI-kit/form-elements/components/expandable-checkbox-list/expandable-checkbox-list
+include ../../UI-kit/form-elements/components/card-room/card-room
+include ../../UI-kit/form-elements/components/rate/rate
+
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+    body 
+        .search-room__header 
+            +header({items:[
+                    {name: 'О нас', mod: 'header__item_bold'},
+                    {name: 'Услуги', mod: 'header__item_expandable'},
+                    {name: 'Вакансии'},
+                    {name: 'Новости'},
+                    {name: 'Соглашения', mod: 'header__item_expandable'},
+                    ], lastItem: 'buttons'})
+        main.search-room_main
+            .search-room__sideblock
+                .search-room__datepicker
+                    +datepicker({
+                        name: 'date',
+                        headerCommon: 'даты пребывания в отеле',
+                        modifier: 'filter'
+                                })
+                .search-room__dropdown-guests
+                    +label({newClass:'search-room__label', labelLeft:'Гости', width:'narrow'})
+                .search-room__slider
+                    +slider({description:'range slider', max: '15000', min: '5000', step:'1000', value1:'7000', value2: '10000', description:'Диапазон цены'})
+                    .search-room__description Стоимость за сутки пребывания в номере
+                +label({newClass:'search-room__label', labelLeft:'Правила дома'})
+                .search-room__chechbox-container
+                    +checkbox({description:'Можно курить'})
+                    +checkbox({description:'Можно с питомцами', checked: true})
+                    +checkbox({description:'Можно пригласить гостей (до 10 человек)', checked: true})
+                +label({newClass:'search-room__label', labelLeft:'Доступность'})
+                .search-room__rich-chechbox-container
+                    +checkbox({description:'Ширина коридоров в номере не менее 91 см', rich: true, title: 'Широкий коридор'})
+                    +checkbox({description:'На 1 этаже вас встретит специалист и проводит до номера', rich: true, title: 'Помощник для инвалидов'})
+                .search-room__dropdown-rooms
+                    +label({newClass:'search-room__label', labelLeft:'Удобства', width:'narrow'})
+                .search-room__expandable-checkbox-list
+                    +expandable-checkbox-list(
+                            {items:[
+                                {text:'Завтрак'}, 
+                                {text:'Письменный стол', checked:true}, 
+                                {text:'Стул для кормления', checked:true},
+                                {text:'Кроватка', checked:true},
+                                {text:'Телевизор'}, 
+                                {text:'Шампунь'}, 
+                                ],
+                            headerTitle:'Дополнительные удобства'})
+            .search-room__body
+        .search-room__footer 
+            +footer
