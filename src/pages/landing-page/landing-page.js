@@ -2,6 +2,8 @@ import '../../fonts/fonts.scss';
 import './landing-page.pug';
 import './landing-page.scss';
 
+import '../../UI-kit/form-elements/components/datepicker/datepicker';
+
 import {Dropdown} from '../../UI-kit/form-elements/components/dropdown/dropdown'
 let newDropdown = new Dropdown(
     {

@@ -23,7 +23,7 @@ const htmlTemplates = Object.entries(pugEntries).map( entry => {
       template: `${entry[1]}.pug`,
       chunks: [entry[0]],
       // chunks: [entry[0], "assets/shared"],
-      filename: `${entry[0]}/index.html`,
+      filename: `${entry[0]}/[name].html`,
   }) 
 })
 
