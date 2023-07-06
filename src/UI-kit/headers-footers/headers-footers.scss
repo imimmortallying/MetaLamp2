@@ -1,0 +1,9 @@
+@use '../../styles/reset.css';
+
+@use 'header/header.scss';
+@use '../../UI-kit/form-elements/components/button/button.scss';
+
+.headers__footers{
+    padding-left: 140px;
+    padding-right: 140px;
+}

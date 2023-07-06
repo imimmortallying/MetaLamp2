@@ -1,0 +1,18 @@
+include ../../UI-kit/form-elements/components/button/button
+include ./header/header
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+    body 
+        .headers__footers
+            +header({items:[
+                {name: 'О нас', mod: 'header__item_bold'},
+                {name: 'Услуги', mod: 'header__item_expandable'},
+                {name: 'Вакансии'},
+                {name: 'Новости'},
+                {name: 'Соглашения', mod: 'header__item_expandable'},
+                ]})

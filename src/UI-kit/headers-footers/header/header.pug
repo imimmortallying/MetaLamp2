@@ -1,25 +1,27 @@
-include ../../burger/burger
-include ../../button/button
-doctype html
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible", content="IE=edge")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Document
-    body 
-    header.header
-        .container
-            .header__inner 
-                .header__logo
-                    img(src=require('../../../img/logo.png') alt="").logo
-                nav.header__nav  
-                    +burger  
-                .header__buttons
-                    div.header__button-login
-                        +button({theme:"transparent", text:"ВОЙТИ"})
-                    div.header__button-signup
-                        +button({theme:"full", text:"ЗАРЕГЕСТРИРОВАТЬСЯ"})
+
+
+mixin header(options={})
+    -
+        const {
+            items = '',
+            lastItem = 'buttons'
+        } = options;
+
+    header.header 
+        .header__logo 
+            img(src=require('../../img/logo.png') alt="").logo
+        .header__items-container 
+            each val in items
+                .header__item(class=val.mod)=val.name
+
+        .header__last-item
+            if (lastItem === 'buttons')
+                .header__buttons-container
+                    +button({theme:"hollow", text:"Войти", width:'regular'})
+                    +button({theme:"full", text:"Зарегестрироваться", width:'wide', isArrowed:false})
+            if (lastItem === 'user')
+                .header__user Юлий Цезарь
+
                     
                     
 
