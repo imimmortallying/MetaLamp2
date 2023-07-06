@@ -3,7 +3,15 @@
 @use 'header/header.scss';
 @use '../../UI-kit/form-elements/components/button/button.scss';
 
-.headers__footers{
-    padding-left: 140px;
-    padding-right: 140px;
+@use 'footer/footer.scss';
+@use '../../UI-kit/form-elements/components/subscription/subscription.scss';
+
+.headers-footers{
+
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    background: #F4F4F6;
 }

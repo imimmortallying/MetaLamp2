@@ -1,8 +1,13 @@
-include ./header/header
+include ../../UI-kit/cards/components/card-find/card-find
+include ../../UI-kit/form-elements/components/datepicker/datepicker
 include ../../UI-kit/form-elements/components/button/button
+include ../../UI-kit/form-elements/components/label/label
 
-include ./footer/footer
+include ../../UI-kit/headers-footers/footer/footer
 include ../../UI-kit/form-elements/components/subscription/subscription
+
+include ../../UI-kit/headers-footers/header/header
+
 
 doctype html
 html(lang="en")
@@ -12,22 +17,16 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Document
     body 
-        .headers-footers
-            .headers-footers__header
-                +header({items:[
+        .landing-page__header 
+            +header({items:[
                     {name: 'О нас', mod: 'header__item_bold'},
                     {name: 'Услуги', mod: 'header__item_expandable'},
                     {name: 'Вакансии'},
                     {name: 'Новости'},
                     {name: 'Соглашения', mod: 'header__item_expandable'},
                     ], lastItem: 'buttons'})
-            .headers-footers__header
-                +header({items:[
-                    {name: 'О нас', mod: 'header__item_bold'},
-                    {name: 'Услуги', mod: 'header__item_expandable'},
-                    {name: 'Вакансии'},
-                    {name: 'Новости'},
-                    {name: 'Соглашения', mod: 'header__item_expandable'},
-                    ], lastItem: 'user'})
-            .headers-footers__footer 
-                +footer
+        main.landing-page__main
+            +card-find
+            .landing-page__annotation Лучшие номера для вашей работы, отдыха и просто вдохновения
+        .landing-page__footer 
+            +footer

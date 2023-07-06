@@ -1,0 +1,44 @@
+@use '../../styles/reset.css';
+// @use '../../styles/variables.scss';
+
+@use '../../UI-kit/cards/components/card-find/card-find.scss';
+@use '../../UI-kit/form-elements/components/button/button.scss';
+@use '../../UI-kit/form-elements/components/datepicker/datepicker.scss';
+@use '../../UI-kit/form-elements/components/dropdown/dropdown.scss';
+@use '../../UI-kit/form-elements/components/label/label.scss';
+
+@use '../../UI-kit/headers-footers/footer/footer.scss';
+@use '../../UI-kit/headers-footers/header/header.scss';
+
+@use '../../UI-kit/form-elements/components/subscription/subscription.scss';
+
+.landing-page__main{
+    display: flex;
+
+    height: 830px;
+    // width: 100%;
+
+    padding-left: 140px;
+    padding-top: 70px;
+
+    background-image: url(../../img/background/landing-page.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position: relative;
+}
+
+.landing-page__annotation{
+    position: absolute;
+
+    width: 297px;
+
+    bottom: 18px;
+    right: 134px;
+
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 14px;
+    color: rgba(31, 32, 65, 0.75);
+
+    text-align: end;
+}

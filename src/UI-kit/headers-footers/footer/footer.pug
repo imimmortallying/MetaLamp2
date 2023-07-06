@@ -1,39 +1,45 @@
+mixin footer(options={})
+    -
+        const {
+            items = '',
+            lastItem = 'buttons'
+        } = options;
 
-doctype html
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible", content="IE=edge")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Document
-    body 
-    header.header
-        .container
-            .header__inner 
-                .header__logo
-                    img(src=require('../../../img/logo.png') alt="").logo
-                nav.header__nav  
-                    ul.nav
-                        li.nav__item
-                            a.nav__link(href="#") О нас         
-                        li.nav__item
-                            a.nav__link(href="#") Услуги
-                        li.nav__item
-                            a.nav__link(href="#") Вакансии
-                        li.nav__item
-                            a.nav__link(href="#") Новости
-                        li.nav__item
-                            a.nav__link(href="#") Соглашения 
-
-                    
-                .header__buttons
-                    div.header__button-login
-                        button.button-empty ВОЙТИ
-                    div.header__button-signup
-                        button.button-full ЗАРЕГЕСТРИРОВАТЬСЯ
-
-  
-    
-    
-                    
+    footer.footer
+        .footer__body 
+            .footer__body-column
+                .footer__item
+                    img(src=require('../../img/logo.png') alt="").footer__logo
+                .footer__item.footer__item_max-w Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды» 
+            .footer__body-column
+                .footer__item.footer__item_bold Навигация
+                .footer__item О нас
+                .footer__item Новости
+                .footer__item Служба поддержки
+                .footer__item Услуги
+            .footer__body-column 
+                .footer__item.footer__item_bold  О нас
+                .footer__item О сервисе
+                .footer__item Наша команда
+                .footer__item Вакансии
+                .footer__item Инвесторы
+            .footer__body-column
+                .footer__item.footer__item_bold  Служба поддержки
+                .footer__item Соглашение
+                .footer__item Сообщества
+                .footer__item Связь с нами
+            .footer__body-column
+                .footer__item.footer__item_bold  Подписка
+                .footer__item.footer__item_max-w Получайте специальные предложения и новости сервиса
+                .footer__item
+                    +subscription({header: false, type:'email', placeholder: 'Email'})
+        .footer__bottom
+            .footer__rights-reserved Copyright © 2018 Toxin отель. Все права защищены.
+            .footer__soc-media-icons
+                .footer__icon-block
+                    img(src=require('../../icons/twitter.svg') alt="").footer__icon
+                .footer__icon-block
+                    img(src=require('../../icons/facebook.svg') alt="").footer__icon
+                .footer__icon-block
+                    img(src=require('../../icons/inst.svg') alt="").footer__icon
         
