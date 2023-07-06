@@ -1,109 +1,22 @@
-<head><script defer src="../cards/cards.01c2cc8101922d37b43a.js"></script></head>Html Webpack Plugin:
+Html Webpack Plugin:
 <pre>
-  Error: Child compilation failed:
-  Module build failed (from ./node_modules/simple-pug-loader/index.js):
-  TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received undefined
-      at new NodeError (node:internal/errors:399:5)
-      at validateString (node:internal/validators:163:11)
-      at Object.normalize (node:path:305:5)
-      at module.exports (C:\Users\хозяин\Desktop\prg\MetaLamp\toxin\node_modules\simple-pug-loader\index.js:104:38)
-  ModuleBuildError: Module build failed (from ./node_modules/simple-pug-loader/index.js):
-  TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received undefined
-      at new NodeError (node:internal/errors:399:5)
-      at validateString (node:internal/validators:163:11)
-      at Object.normalize (node:path:305:5)
-      at module.exports (C:\Users\хозяин\Desktop\prg\MetaLamp\toxin\node_modules\simple-pug-loader\index.js:104:38)
-      at processResult (C:\Users\хозяин\Desktop\prg\MetaLamp\toxin\node_modules\webpack\lib\NormalModule.js:761:19)
-      at C:\Users\хозяин\Desktop\prg\MetaLamp\toxin\node_modules\webpack\lib\NormalModule.js:863:5
-      at C:\Users\хозяин\Desktop\prg\MetaLamp\toxin\node_modules\loader-runner\lib\LoaderRunner.js:400:11
-      at C:\Users\хозяин\Desktop\prg\MetaLamp\toxin\node_modules\loader-runner\lib\LoaderRunner.js:252:18
-      at runSyncOrAsync (C:\Users\хозяин\Desktop\prg\MetaLamp\toxin\node_modules\loader-runner\lib\LoaderRunner.js:156:3)
-      at iterateNormalLoaders (C:\Users\хозяин\Desktop\prg\MetaLamp\toxin\node_modules\loader-runner\lib\LoaderRunner.js:251:2)
-      at C:\Users\хозяин\Desktop\prg\MetaLamp\toxin\node_modules\loader-runner\lib\LoaderRunner.js:224:4
-      at C:\Users\хозяин\Desktop\prg\MetaLamp\toxin\node_modules\webpack\lib\NormalModule.js:837:15
-      at eval (eval at create (C:\Users\хозяин\Desktop\prg\MetaLamp\toxin\node_modules\tapable\lib\HookCodeFactory.js:33:10), <anonymous>:12:  1)
-      at runCallbacks (C:\Users\хозяин\Desktop\prg\MetaLamp\toxin\node_modules\enhanced-resolve\lib\CachedInputFileSystem.js:34:4)
+  TypeError: pug_mixins.rate is not a function
   
-  - errors:399 new NodeError
-    node:internal/errors:399:5
+  - loader.js:371 Object.pug_interp [as card-room]
+    [cards.pug?.]/[html-webpack-plugin]/lib/loader.js:371:19
   
-  - validators:163 validateString
-    node:internal/validators:163:11
+  - loader.js:385 eval
+    [cards.pug?.]/[html-webpack-plugin]/lib/loader.js:385:24
   
-  - node:path:305 Object.normalize
-    node:path:305:5
+  - loader.js:387 template
+    [cards.pug?.]/[html-webpack-plugin]/lib/loader.js:387:7
   
-  - index.js:104 module.exports
-    [toxin]/[simple-pug-loader]/index.js:104:38
+  - index.js:450 
+    [toxin]/[html-webpack-plugin]/index.js:450:16
   
-  - ModuleBuildError: Module build failed (from ./node_modules/simple-pug-loader/index.js):
+  - task_queues:95 processTicksAndRejections
+    node:internal/process/task_queues:95:5
   
-  - TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received undefined
-  
-  - errors:399 new NodeError
-    node:internal/errors:399:5
-  
-  - validators:163 validateString
-    node:internal/validators:163:11
-  
-  - node:path:305 Object.normalize
-    node:path:305:5
-  
-  - index.js:104 module.exports
-    [toxin]/[simple-pug-loader]/index.js:104:38
-  
-  - NormalModule.js:761 processResult
-    [toxin]/[webpack]/lib/NormalModule.js:761:19
-  
-  - NormalModule.js:863 
-    [toxin]/[webpack]/lib/NormalModule.js:863:5
-  
-  - LoaderRunner.js:400 
-    [toxin]/[loader-runner]/lib/LoaderRunner.js:400:11
-  
-  - LoaderRunner.js:252 
-    [toxin]/[loader-runner]/lib/LoaderRunner.js:252:18
-  
-  - LoaderRunner.js:156 runSyncOrAsync
-    [toxin]/[loader-runner]/lib/LoaderRunner.js:156:3
-  
-  - LoaderRunner.js:251 iterateNormalLoaders
-    [toxin]/[loader-runner]/lib/LoaderRunner.js:251:2
-  
-  - LoaderRunner.js:224 
-    [toxin]/[loader-runner]/lib/LoaderRunner.js:224:4
-  
-  - NormalModule.js:837 
-    [toxin]/[webpack]/lib/NormalModule.js:837:15
-  
-  
-  - CachedInputFileSystem.js:34 runCallbacks
-    [toxin]/[enhanced-resolve]/lib/CachedInputFileSystem.js:34:4
-  
-  - child-compiler.js:169 
-    [toxin]/[html-webpack-plugin]/lib/child-compiler.js:169:18
-  
-  - Compiler.js:551 finalCallback
-    [toxin]/[webpack]/lib/Compiler.js:551:5
-  
-  - Compiler.js:577 
-    [toxin]/[webpack]/lib/Compiler.js:577:11
-  
-  - Compiler.js:1196 
-    [toxin]/[webpack]/lib/Compiler.js:1196:17
-  
-  
-  - Hook.js:18 Hook.CALL_ASYNC_DELEGATE [as _callAsync]
-    [toxin]/[tapable]/lib/Hook.js:18:14
-  
-  - Compiler.js:1192 
-    [toxin]/[webpack]/lib/Compiler.js:1192:33
-  
-  - Compilation.js:2787 finalCallback
-    [toxin]/[webpack]/lib/Compilation.js:2787:11
-  
-  - Compilation.js:3092 
-    [toxin]/[webpack]/lib/Compilation.js:3092:11
-  
+  - async Promise.all
   
 </pre>

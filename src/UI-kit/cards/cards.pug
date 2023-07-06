@@ -13,6 +13,9 @@ include components/card-booking/card-booking
 
 include components/card-entering/card-entering
 
+include ../../UI-kit/form-elements/components/card-room/card-room
+include ../../UI-kit/form-elements/components/rate/rate
+
 doctype html
 html(lang="en")
     head
@@ -34,3 +37,9 @@ html(lang="en")
                 .cards__entering
                     +card-entering
             .cards__item
+                .cards__calendar 
+                    +datepicker({ modifier: 'demo' })
+                .cards__card-room
+                    +card-room({ number: '888', isLuxe: true, price: 9990, rating: 5, reviews: 145 })
+                .cards__card-room
+                    +card-room({ number: '840', price: 9990, rating: 4, reviews: 65 })

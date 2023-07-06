@@ -1,0 +1,25 @@
+mixin rate(options={})
+  -
+    //- this constant should be duplicated in ./rate.js: const maxRating = 5;
+    //- and in ./rate.scss: $max-rating: 5;
+    const maxRating = 5;
+
+    const {
+      rating = 0,
+      enabled = false,
+    } = options;
+
+    const rateClass = enabled
+      ? 'rate_enabled'
+      : '';
+
+    const tabindex = enabled
+      ? '0'
+      : false;
+
+    let i = 0;
+
+  .rate.js-rate(class= rateClass data-rating= rating tabindex= tabindex)
+    while i < maxRating
+      - i += 1;
+      .rate__star.js-rate__star(data-rating= i)

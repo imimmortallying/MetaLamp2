@@ -1,0 +1,125 @@
+mixin card-room(options={})
+  -
+    const {
+      number = '',
+      isLuxe = false,
+      price = 0,
+      rating = 0,
+      reviews = 0
+    } = options;
+
+    //- this constant should be duplicated in ./card-room.js: const quantitySlides = 4;
+    //- and in ./card-room.scss: $quantity-slides: 4;
+    const quantitySlides = 4;
+
+    const rateOptions = { rating };
+
+    const img = [];
+    switch(number) {
+      case '888':
+        img.push(require('../../../src/img/content/room-888.jpg'));
+        img.push(require('../../../src/img/content/room-740.jpg'));
+        img.push(require('../../../src/img/content/room-982.jpg'));
+        img.push(require('../../../src/img/content/room-678.jpg'));
+        break;
+      case '840':
+        img.push(require('../../../src/img/content/room-840.jpg'));
+        img.push(require('../../../src/img/content/room-982.jpg'));
+        img.push(require('../../../src/img/content/room-678.jpg'));
+        img.push(require('../../../src/img/content/room-450.jpg'));
+        break;
+      case '980':
+        img.push(require('../../../src/img/content/room-980.jpg'));
+        img.push(require('../../../src/img/content/room-678.jpg'));
+        img.push(require('../../../src/img/content/room-450.jpg'));
+        img.push(require('../../../src/img/content/room-350.jpg'));
+        break;
+      case '856':
+        img.push(require('../../../src/img/content/room-856.jpg'));
+        img.push(require('../../../src/img/content/room-450.jpg'));
+        img.push(require('../../../src/img/content/room-350.jpg'));
+        img.push(require('../../../src/img/content/room-666.jpg'));
+        break;
+      case '740':
+        img.push(require('../../../src/img/content/room-740.jpg'));
+        img.push(require('../../../src/img/content/room-350.jpg'));
+        img.push(require('../../../src/img/content/room-666.jpg'));
+        img.push(require('../../../src/img/content/room-444.jpg'));
+        break;
+      case '982':
+        img.push(require('../../../src/img/content/room-982.jpg'));
+        img.push(require('../../../src/img/content/room-666.jpg'));
+        img.push(require('../../../src/img/content/room-444.jpg'));
+        img.push(require('../../../src/img/content/room-352.jpg'));
+        break;
+      case '678':
+        img.push(require('../../../src/img/content/room-678.jpg'));
+        img.push(require('../../../src/img/content/room-444.jpg'));
+        img.push(require('../../../src/img/content/room-352.jpg'));
+        img.push(require('../../../src/img/content/room-888.jpg'));
+        break;
+      case '450':
+        img.push(require('../../../src/img/content/room-450.jpg'));
+        img.push(require('../../../src/img/content/room-352.jpg'));
+        img.push(require('../../../src/img/content/room-888.jpg'));
+        img.push(require('../../../src/img/content/room-840.jpg'));
+        break;
+      case '350':
+        img.push(require('../../../src/img/content/room-350.jpg'));
+        img.push(require('../../../src/img/content/room-888.jpg'));
+        img.push(require('../../../src/img/content/room-840.jpg'));
+        img.push(require('../../../src/img/content/room-980.jpg'));
+        break;
+      case '666':
+        img.push(require('../../../src/img/content/room-666.jpg'));
+        img.push(require('../../../src/img/content/room-840.jpg'));
+        img.push(require('../../../src/img/content/room-980.jpg'));
+        img.push(require('../../../src/img/content/room-856.jpg'));
+        break;
+      case '444':
+        img.push(require('../../../src/img/content/room-444.jpg'));
+        img.push(require('../../../src/img/content/room-980.jpg'));
+        img.push(require('../../../src/img/content/room-856.jpg'));
+        img.push(require('../../../src/img/content/room-740.jpg'));
+        break;
+      case '352':
+        img.push(require('../../../src/img/content/room-352.jpg'));
+        img.push(require('../../../src/img/content/room-856.jpg'));
+        img.push(require('../../../src/img/content/room-740.jpg'));
+        img.push(require('../../../src/img/content/room-982.jpg'));
+        src
+      default:
+        img.push(require('../../../src/img/decorative/icon-monochrome.svg'));
+        img.push(require('../../../src/img/decorative/icon-monochrome.svg'));
+        img.push(require('../../../src/img/decorative/icon-monochrome.svg'));
+        img.push(require('../../../src/img/decorative/icon-monochrome.svg'));
+    }
+
+  section.card-room.js-card-room(data-slide="0" tabindex="0")
+    .card-room__gallery
+      form.card-room__form.js-card-room__form(action="./room-details.html")
+        button.card-room__button(tabindex="-1")
+          - let i = 0;
+          while i < quantitySlides
+            img.card-room__image(
+              src= img[i++]
+              alt="Room photo"
+            )
+      .card-room__back.js-card-room__back
+      .card-room__forward.js-card-room__forward
+      .card-room__nav.js-card-room__nav
+        - i = 0;
+        while i < quantitySlides
+          .card-room__nav-item.js-card-room__nav-item(data-slide= i++)
+    h2.card-room__header
+      span.card-room__number №
+      span.card-room__numeric= number
+      span.card-room__lux
+        if (isLuxe)
+          = 'люкс'
+      span.card-room__price= `${new Intl.NumberFormat('ru-RU').format(price)}₽`
+      = 'в сутки'
+    .card-room__footer
+      +rate(rateOptions)
+      .card-room__reviews= reviews
+      .card-room__reviews-text Отзывов

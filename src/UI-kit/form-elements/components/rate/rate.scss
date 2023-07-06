@@ -1,0 +1,59 @@
+.rate {
+    $root: &;
+  
+    /*  this constant should be duplicated in ./rate.pug: const maxRating = 5;
+        and in ./rate.js: const maxRating = 5; */
+    $max-rating: 5;
+  
+    display: flex;
+    outline: 0;
+  
+    &__star {
+      width: 24px;
+      height: 24px;
+      position: relative;
+  
+      &::after {
+        content: 'star_border';
+        font-family: material-icons, Arial, sans-serif;
+        font-size: 24px;
+        line-height: 24px;
+        color: #bc9cff;
+        background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+      }
+    }
+  
+    &_enabled {
+      #{$root}__star {
+        cursor: pointer;
+      }
+    }
+  
+    &__input {
+      display: none;
+    }
+  
+    &:focus {
+      text-shadow: 0 0 10px #bc9cff;
+    }
+  
+    @for $i from 1 through $max-rating {
+      &[data-rating="#{$i}"] {
+        @for $j from 1 through $i {
+          #{$root}__star {
+            &:nth-child(#{$j}) {
+              &::after {
+                content: 'star';
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  

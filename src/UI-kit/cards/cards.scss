@@ -18,6 +18,9 @@
 
 @use 'components/card-entering/card-entering.scss';
 
+@use '../../UI-kit/form-elements/components/card-room/card-room.scss';
+@use '../../UI-kit/form-elements/components/rate/rate.scss';
+
 .cards{
     display: grid;
     gap: 40px;
@@ -31,4 +34,9 @@
    display: flex;
    flex-direction: column;
    gap: 40px;
+}
+
+.cards__calendar{
+    width: 320px;
+    min-height: 409px;
 }
