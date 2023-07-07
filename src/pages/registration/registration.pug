@@ -1,0 +1,34 @@
+include ../../UI-kit/cards/components/card-registration/card-registration
+include ../../UI-kit/form-elements/components/textfield/textfield
+include ../../UI-kit/form-elements/components/radio/radio
+include ../../UI-kit/form-elements/components/masked-textfield/masked-textfield
+include ../../UI-kit/form-elements/components/toggle/toggle
+include ../../UI-kit/form-elements/components/button/button
+include ../../UI-kit/form-elements/components/label/label
+
+include ../../UI-kit/headers-footers/footer/footer
+include ../../UI-kit/form-elements/components/subscription/subscription
+
+include ../../UI-kit/headers-footers/header/header
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+    body 
+        .registration__header 
+            +header({items:[
+                        {name: 'О нас', mod: 'header__item_bold'},
+                        {name: 'Услуги', mod: 'header__item_expandable'},
+                        {name: 'Вакансии'},
+                        {name: 'Новости'},
+                        {name: 'Соглашения', mod: 'header__item_expandable'},
+                        ], lastItem: 'buttons'})
+        main.registration__body
+            .registration__card-registration
+                +card-registration
+        .registration__footer
+            +footer

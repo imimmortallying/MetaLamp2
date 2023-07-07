@@ -1,0 +1,29 @@
+@use '../../styles/reset.css';
+@use '../../UI-kit/headers-footers/footer/footer.scss';
+@use '../../UI-kit/headers-footers/header/header.scss';
+
+@use '../../UI-kit/cards/components/card-registration/card-registration.scss';
+@use '../../UI-kit/form-elements/components/radio/radio.scss';
+@use '../../UI-kit/form-elements/components/masked-textfield/masked-textfield.scss';
+@use '../../UI-kit/form-elements/components/toggle/toggle.scss';
+@use '../../UI-kit/form-elements/components/textfield/textfield.scss';
+@use '../../UI-kit/form-elements/components/button/button.scss';
+
+
+.registration__body{
+    height: 684px;
+    display: flex;
+    // width: 380px;
+
+    justify-content: center;
+
+    background-image: url(../../img/background/registration.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding-top: 19px;
+}
+
+.registration__card-registration{
+    // width: 380px;
+}
