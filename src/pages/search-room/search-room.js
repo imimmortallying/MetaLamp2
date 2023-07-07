@@ -3,6 +3,8 @@ import './search-room.pug';
 import './search-room.scss';
 
 import '../../UI-kit/form-elements/components/datepicker/datepicker';
+// import '../../UI-kit/form-elements/components/pagination/pagination';
+import '../../UI-kit/form-elements/components/card-room/card-room';
 import '../../UI-kit/form-elements/components/slider/slider';
 import '../../UI-kit/form-elements/components/expandable-checkbox-list/expandable-checkbox-list';
 
@@ -50,3 +52,13 @@ let newDropdownRooms = new Dropdown(
     })
 
 newDropdownRooms.createDropdown();
+
+import {Paginator} from '../../UI-kit/form-elements/components/pagination/pagination'
+let constructPagination = new Paginator(
+    {
+    element: ".pagination__container",
+    totalPages: 20,
+    currentPage: 9,
+    })
+
+constructPagination.element()

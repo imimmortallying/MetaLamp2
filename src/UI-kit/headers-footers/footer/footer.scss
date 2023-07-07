@@ -4,17 +4,19 @@
     font-family: 'Montserrat', Arial, sans-serif;
     background-color: #fff;
 
-    padding-left: 140px;
-    padding-right: 140px;
 }
 
 .footer__body{
+    padding-left: 140px;
+    padding-right: 140px;
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding-top: 100px;
 
     height: 372px;
+    border-bottom: 1px solid rgba(31, 32, 65, 0.25);
 }
 
 .footer__body-column{
@@ -47,6 +49,10 @@
 
     height: 70px;
     align-items: center;
+
+    padding-left: 140px;
+    padding-right: 140px;
+
 }
 
 .footer__rights-reserved{

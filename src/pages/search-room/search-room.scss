@@ -6,18 +6,26 @@
 @use '../../UI-kit/form-elements/components/datepicker/datepicker.scss';
 @use '../../UI-kit/form-elements/components/dropdown/dropdown.scss';
 @use '../../UI-kit/form-elements/components/label/label.scss';
+@use '../../UI-kit/form-elements/components/card-room/card-room.scss';
 
 @use '../../UI-kit/headers-footers/footer/footer.scss';
 @use '../../UI-kit/headers-footers/header/header.scss';
 
 @use '../../UI-kit/form-elements/components/subscription/subscription.scss';
 @use '../../UI-kit/form-elements/components/slider/slider.scss';
+@use '../../UI-kit/form-elements/components/rate/rate.scss';
+@use '../../UI-kit/form-elements/components/pagination/pagination.scss';
 @use '../../UI-kit/form-elements/components/checkbox/checkbox.scss';
 @use '../../UI-kit/form-elements/components/expandable-checkbox-list/expandable-checkbox-list.scss';
 
 .search-room_main{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+
+    gap: 60px;
+
+    padding-left: 140px;
+    padding-top: 30px;
 }
 
 .search-room__sideblock{
@@ -69,4 +77,32 @@
 
 .search-room__dropdown-rooms{
     padding-bottom: 30px;
+}
+
+.search-room__body{
+    display: flex;
+    flex-direction: column;
+    // gap:12px;
+}
+
+.search-room__cards-container{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+
+.search-room__body-column{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.search-room__pagination{
+    padding-left: 289px;
+    padding-top: 40px;
+    padding-bottom: 70px;
+}
+
+.search-room__footer{
+    border-top: 1px rgba(31, 32, 65, 0.25) solid;
 }
